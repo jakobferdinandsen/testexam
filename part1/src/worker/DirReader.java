@@ -1,7 +1,6 @@
 package worker;
 
 import java.io.*;
-import java.nio.file.Path;
 import java.util.ArrayList;
 
 /**
@@ -9,30 +8,54 @@ import java.util.ArrayList;
  */
 public class DirReader {
 
-    public DirReader(){}
+    public DirReader() {
+    }
 
-    public ArrayList<String> composeNumberOfLines(Path path){
+    public File[] getFilesFromDir(String dir) {
+        return new File(dir).listFiles();
+    }
+
+
+    public ArrayList<String> composeNumberOfLines(String path) {
         ArrayList<String> result = new ArrayList<>();
-        File[] files = new File("path").listFiles();
-        for (File file : files) {
-
+        for (File file : getFilesFromDir(path)) {
+            result.add(file.getName() + " " + countLines(file));
         }
-
-
-
         return result;
     }
 
 
-    public int getNumberOfLines(File file) throws IOException {
-        FileReader fr = new FileReader(file);
+    public int countLines(File file) {
+        FileReader fr = null;
+        try {
+            fr = new FileReader(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         BufferedReader textReader = new BufferedReader(fr);
         int count = 0;
         String aLine;
-        while ((aLine = textReader.readLine()) != null) {
-            count++;
+        try {
+            while ((aLine = textReader.readLine()) != null) {
+                count++;
+            }
+            textReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        textReader.close();
         return count;
+    }
+
+    public void writeNumberOfLinesFile() {
+        String currentDir = System.getProperty("user.dir");
+        try {
+            PrintWriter pw = new PrintWriter(currentDir + "/output/j1.txt");
+            for (String line : composeNumberOfLines(currentDir + "/searchdir")) {
+                pw.println(line);
+            }
+            pw.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
