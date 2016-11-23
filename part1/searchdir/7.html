@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="da" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="da" class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="da" class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="da" class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="da"> <!--<![endif]-->
+     <head>
+        <script id="ensighten-script" src="//www.dr.dk/drdk-ensighten/Bootstrap.js"></script>
+        <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0a9a78a253","applicationID":"4041976","transactionName":"NFRaZBNUDBVTAkVbDA0efF8VewcScQ5fRhEMXVRVExokFF0PRUICBFQXeQ9RBx4=","queueTime":0,"applicationTime":662,"ttGuid":"AA9189A2219175DD","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgEAWFVSGwcAUFBbAAc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+        <title>DR Forsiden - TV, Radio, Nyheder og meget mere fra dr.dk</title>
+        <meta name="description" content="Her finder du nyheder fra DR og alle vores TV og Radio kanaler live og on demand - n&aring;r du har lyst. PS: Vi har ogs&aring; Ramasjang til ungerne, Kh DR.">
+        <meta name="publisher" content="DR, DR Byen, Emil Holms Kanal 20, DK-0999 K&oslash;benhavn C, tlf.: +45 35 20 30 40">
+        <meta property="og:title" content="DR Forsiden">
+        <meta property="og:description" content="Her finder du nyheder fra DR og alle vores TV og Radio kanaler live og on demand - n&aring;r du har lyst.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://www.dr.dk/design/www/global/img/global/DRLogos/DR_logo.jpg">
+        <meta property="og:url" content="http://www.dr.dk">
+        <meta property="og:site_name" content="DR">
+        <meta property="og:locale" content="da_DK">
+        <link rel="canonical" href="http://www.dr.dk">
+        <link rel="stylesheet" href="/assets/css/003/base-static.css" media="all">
+        <link rel="stylesheet" href="/assets/css/shared/ritzau-logos.css" media="all">
+        
+        <link rel="stylesheet" href="/Forside/drdk/DR.Frontpage/content/css/frontpage.css?v6" media="all">
+        <style>
+		.js .image-wrap.ratio-140-80:after { padding-bottom: 57.14285714285714%; }
+		.js .image-wrap.ratio-236-170:after { padding-bottom: 72.0338983050847%; }
+.js .image-wrap.ratio-224-78:after { padding-bottom: 34.8214285714286%; }
+.js .image-wrap.ratio-221-201:after { padding-bottom: 90.9502262443439%; }
+.js .image-wrap.ratio-300-104:after { padding-bottom: 34.6666666666667%; }
+.js .image-wrap.ratio-140-88:after { padding-bottom: 62.8571428571429%; }
+.js .image-wrap.ratio-140-80:after { padding-bottom: 57.1428571428571%; }
+.js .image-wrap.ratio-620-218:after { padding-bottom: 35.1612903225806%; }
+.js .image-wrap.ratio-300-128:after { padding-bottom: 42.6666666666667%; }
+.js .image-wrap.ratio-220-151:after { padding-bottom: 68.6363636363636%; }
+.js .image-wrap.ratio-300-150:after { padding-bottom: 50%; }
+.js .image-wrap.ratio-620-228:after { padding-bottom: 36.7741935483871%; }
+.js .image-wrap.ratio-140-109:after { padding-bottom: 77.8571428571429%; }
+.js .image-wrap.ratio-140-141:after { padding-bottom: 100.714285714286%; }
+.js .image-wrap.ratio-300-153:after { padding-bottom: 51%; }
+.js .image-wrap.ratio-620-318:after { padding-bottom: 51.2903225806452%; }
+.js .image-wrap.ratio-620-287:after { padding-bottom: 46.2903225806452%; }
+.js .image-wrap.ratio-300-129:after { padding-bottom: 43%; }
+.js .image-wrap.ratio-300-127:after { padding-bottom: 42.3333333333333%; }
+.js .image-wrap.ratio-620-239:after { padding-bottom: 38.5483870967742%; }
+.js .image-wrap.ratio-300-152:after { padding-bottom: 50.6666666666667%; }
+.js .image-wrap.ratio-620-319:after { padding-bottom: 51.4516129032258%; }
+.js .image-wrap.ratio-140-112:after { padding-bottom: 80%; }
+.js .image-wrap.ratio-140-129:after { padding-bottom: 92.1428571428571%; }
+.js .image-wrap.ratio-300-105:after { padding-bottom: 35%; }
+.js .image-wrap.ratio-620-270:after { padding-bottom: 43.5483870967742%; }
+.js .image-wrap.ratio-620-349:after { padding-bottom: 56.2903225806452%; }
+.js .image-wrap.ratio-620-267:after { padding-bottom: 43.0645161290323%; }
+
+        </style>
+        <link rel="stylesheet" href="//www.dr.dk/nyheder/htm/forside/css/tema-container-skins-3.css" media="all">
+        <script src="/assets/js/004/base.js"></script>
+        <script src="/Forside/drdk/DR.Frontpage/Content/script/frontpage.js?v=3"></script>
+    </head>
+    <body>
+        
+
+<a href="#content" class="skip-link">Gå til indhold</a>
+
+<!--[if IE 8 ]>    <div class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <div class="ie ie9"> <![endif]-->
+
+<div id="globalnavigation" role="banner">
+	<div role="navigation" class="nav-wrapper" id="globalTop">
+
+		<!-- Desktop/tablet nav start -->
+		<a href="http://www.dr.dk/" class="dr-logo desktop" onclick="ga('send', 'event', 'desktop-topbar', 'click', 'logo');"><span class="dr-hide">Gå til forsiden af dr.dk</span></a>
+		<ul class="desktop">
+
+
+<li><a href="http://www.dr.dk/nyheder/">Nyheder</a>
+	<ul>
+
+
+<li><a href="http://www.dr.dk/nyheder/">Nyhedsoverblik</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/politik/">Politik</a>
+</li>
+
+<li><a href="http://www.dr.dk/sporten/">Sport</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/viden/">Viden</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/kultur/">Kultur</a>
+</li>
+
+<li><a href="https://www.dr.dk/nyheder/debat/">Debat</a>
+</li>
+
+<li><a href="http://www.dr.dk/levnu/">Lev Nu</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/regionale/">Regionalt</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/vejret/">Vejr</a>
+</li>
+
+<li><a href="http://www.dr.dk/nyheder/allenyheder/">Alle nyheder</a>
+</li>	</ul>
+</li>
+
+<li><a href="https://www.dr.dk/tv/">TV</a>
+	<ul>
+
+
+<li><a href="https://www.dr.dk/tv/">TV forside</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/programmer">Programmer</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/live/dr1/">Live-TV</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/oversigt/">TV-oversigt</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/boern/">B&#248;rn</a>
+</li>	</ul>
+</li>
+
+<li><a href="http://www.dr.dk/radio/">Radio</a>
+	<ul>
+
+
+<li><a href="http://www.dr.dk/radio/">H&#248;r radio</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/oversigt/">Radio-oversigten</a>
+</li>
+
+<li><a href="http://www.dr.dk/playlister/">Playlister</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/kanaler/">Kanaler</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/drpodcast/">DR Podcast</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/find-program/">Find program</a>
+</li>	</ul>
+</li>
+
+<li><a href="http://www.dr.dk/mere/">Mere</a>
+</li>			<li class="expand-nav-only">
+				<a href="http://www.dr.dk/service/privatlivspolitik/" rel="nofollow" class="dr-link-privacy-policy">
+					Privatlivspolitik
+				</a>
+			</li>
+		</ul>
+		<!-- Desktop/tablet nav end -->
+
+		<!-- Mobile nav start -->
+		<a href="http://mobil.dr.dk/" class="dr-logo mobile" onclick="ga('send', 'event', 'mobile-topbar', 'click', 'logo');">Forside</a>
+		<ul class="mobile">
+
+
+<li><a href="http://mobil.dr.dk/#nyheder">Nyheder</a>
+	<ul>
+
+
+<li><a href="http://mobil.dr.dk/#nyheder/indland">Indland</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#nyheder/udland">Udland</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#nyheder/politik">Politik</a>
+</li>
+
+<li><a href="http://www.dr.dk/sporten/">Sport</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#nyheder/kultur">Kultur</a>
+</li>
+
+<li><a href="https://www.dr.dk/nyheder/debat/">Debat</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#nyheder/viden">Viden</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#nyheder/levnu">Lev Nu</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#regioner">Regionalt</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#vejret">Vejret</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#apps/nyheder">Nyheds app</a>
+</li>	</ul>
+</li>
+
+<li><a href="https://www.dr.dk/tv/">TV</a>
+	<ul>
+
+
+<li><a href="https://www.dr.dk/tv/">TV forside</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/programmer">Programmer</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/live/dr1/"><span aria-hidden="true">Live-TV</span><span class="global-screen-reader">Direkte TV</span></a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/oversigt/">TV-oversigt</a>
+</li>
+
+<li><a href="https://www.dr.dk/tv/boern/">B&#248;rn</a>
+</li>	</ul>
+</li>
+
+<li><a href="http://www.dr.dk/radio/">Radio</a>
+	<ul>
+
+
+<li><a href="http://www.dr.dk/radio/live/p1"target="_blank" rel="nofollow">DR P1</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p2"target="_blank" rel="nofollow">DR P2</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p3"target="_blank" rel="nofollow">DR P3</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p4kbh"target="_blank" rel="nofollow">DR P4</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p5"target="_blank" rel="nofollow">DR P5</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p6beat"target="_blank" rel="nofollow">DR P6 BEAT</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p7mix"target="_blank" rel="nofollow">DR P7 MIX</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/live/p7jazz"target="_blank" rel="nofollow">DR P8 JAZZ</a>
+</li>
+
+<li><a href="http://www.dr.dk/radio/drpodcast"target="_blank" rel="nofollow">DR Podcast</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/#apps/radio"rel="nofollow">Radio app</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/musik/"rel="nofollow">Musik</a>
+</li>
+
+<li><a href="http://mobil.dr.dk/playlister/"rel="nofollow">Playlister</a>
+</li>	</ul>
+</li>			<li class="expand-nav-only">
+				<a href="http://www.dr.dk/service/privatlivspolitik/" rel="nofollow" class="dr-link-privacy-policy">Privatlivspolitik</a>
+			</li>
+		</ul>
+		<!-- Mobile nav end -->
+		<form action="//www.dr.dk/search/Result" method="get" role="search">
+			<div class="cookie-policy">
+				<a href="http://www.dr.dk/service/privatlivspolitik/" rel="nofollow" class="dr-link-privacy-policy">Privatlivspolitik</a>
+			</div>
+			<label for="top-search">Søg på dr.dk</label><input id="top-search" class="no-icon" type="text" name="query" placeholder="Søg på dr.dk" autocomplete="off"><button id="top-submit" type="submit" class="dr-icon-search">Søg</button>
+		</form>
+		<span id="globalnavigation-toggler" class="menu-button" title="Åben/luk menu" onclick="ga('send', 'event', 'mobile-topbar', 'click', 'menu-toggler');">Menu</span>
+	</div>
+</div>
+
+<!--[if IE]></div><![endif]-->
+
+        <div style="overflow: hidden;">
+            <div class="site-wrapper">
+               <div class="focus-bar">
+     <div class="activity-buttons">
+         <div id="activity-item-1" class="bg-esi-box">
+<a href="//www.dr.dk/creatives/api/v1/count/click/43875/7353" class="heading-xsmall dr-banner-spot" style="background-image: url(http://asset.dr.dk/imagescaler01/www.dr.dk/drdkGlobal/spot/Images/fokusbaand/DelerDK_Debat.jpg);">
+	<div><span>TEMA: Vi deler</span><span>Danmark</span></div>
+</a>
+<script>
+	if (!this.DR_adspaces) this.DR_adspaces = [];
+	DR_adspaces.push({ "c": "43875", "b": "7353", "a": "210" });
+</script></div>
+         <div id="activity-item-2" class="bg-esi-box">
+<a href="//www.dr.dk/creatives/api/v1/count/click/43750/7055" class="heading-xsmall dr-banner-spot" style="background-image: url(http://asset.dr.dk/imagescaler01/www.dr.dk/drdkGlobal/spot/Images/fokusbaand/bedrag2.jpg);">
+	<div><span>Se tv:</span><span>Bedrag</span></div>
+</a>
+<script>
+	if (!this.DR_adspaces) this.DR_adspaces = [];
+	DR_adspaces.push({ "c": "43750", "b": "7055", "a": "211" });
+</script></div>
+         <div id="activity-item-3">
+             <div id="weather"></div>
+             <h3>
+                 <a href="http://dr.dk/vejret"><span>Vejret</span></a>
+             </h3>
+             <div class="clearer"></div>
+         </div>
+         <div id="activity-item-4" class="bg-esi-box">
+<a href="//www.dr.dk/creatives/api/v1/count/click/41401/5194" class="heading-xsmall dr-banner-spot" style="background-image: url(http://www.dr.dk/drdkGlobal/spot/Images/fokusbaand/superliga.jpg);">
+	<div><span>Alt om</span><span>Superligaen</span></div>
+</a>
+<script>
+	if (!this.DR_adspaces) this.DR_adspaces = [];
+	DR_adspaces.push({ "c": "41401", "b": "5194", "a": "212" });
+</script></div>
+         
+     </div>
+    <div class="habit-buttons">
+        <a href="http://www.dr.dk/minimgp" class="image-wrap mgp">
+            <img src="/assets/img/ratio-none.gif" width="100" height="100" data-src="/Forside/drdk/DR.Frontpage/Content/img/mgp-button_small.png" />
+            <noscript><img src="/Forside/drdk/DR.Frontpage/Content/img/mgp-button_small.png" width="100" height="100" /></noscript>
+        </a>
+        <a href="http://www.dr.dk/ramasjang" class="image-wrap ramasjang">
+            <img src="/assets/img/ratio-none.gif" width="100" height="100" data-src="/Forside/drdk/DR.Frontpage/Content/img/ramasjang-button_small.png" />
+            <noscript><img src="/Forside/drdk/DR.Frontpage/Content/img/ramasjang-button_small.png" width="100" height="100" /></noscript>
+        </a>
+        <a href="http://www.dr.dk/ultra" class="image-wrap ultra">
+            <img src="/assets/img/ratio-none.gif" width="100" height="100" data-src="/Forside/drdk/DR.Frontpage/Content/img/ultra-button_small.png" />
+            <noscript><img src="/Forside/drdk/DR.Frontpage/Content/img/ultra-button_small.png" width="100" height="100" /></noscript>
+        </a>
+    </div>
+</div>
+
+                <div class="row">
+                    <!-- <div class="col technical-problems span-12">Vi har i &oslash;jeblikket tekniske problemer. Beklager ulejligheden.</div> -->
+
+                </div>
+                <div class="row latest-news">
+                    <div class="col span-8">
+                            <article>
+        <a href="http://www.dr.dk/nyheder" class="section-link dr-icon-link-boxed">Få hele nyhedsoverblikket</a>
+        <p class="metainfo"><a href="/nyheder/">Seneste nyt</a> (11 min. siden)</p>
+        <a href="http://www.dr.dk/nyheder/indland/politiet-anholder-otte-maend-i-stor-bandeaktion-i-herning"><h4>Politiet anholder otte m&#230;nd i stor bandeaktion i Herning</h4></a>
+</article>
+
+                    </div>
+                    <div class="col span-4">
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="http://www.dr.dk/radio/player" class="section-link dr-icon-audio" rel="dr-netradio-launch">H&oslash;r netradio</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.dr.dk/tv/oversigt" class="section-link dr-icon-guide">Tv-oversigten</a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                
+
+<div id="front-9" class="drfront df-skin-forside df-published">
+	<div class="df-articles">
+		<div id="df-9-a260272c" class="df-container df-autorow df-row-1 df-skin-default df-container-locked">
+	<div class="df-container-inner">
+		
+		
+<div class="df-article df-width-33 df-right">
+    <div class="row">
+        <div class="col span-4">
+        <section class="spots tvSpot">
+            <div class="row">
+                <header>
+                    <h2><a href="http://www.dr.dk/tv" title="DR TV"><span class="dr-logo-drtv-large"></span></a></h2>
+                    <a href="http://www.dr.dk/tv" class="dr-icon-link-boxed section-link">TV</a>
+                </header>
+                <div class="col heading-medium span-4" data-ga-index="1" data-ga-zone="tvTopSpot">
+                    
+
+
+
+
+
+<article class="dr-spot header-medium no-links">
+    
+        <a href="http://www.dr.dk/tv/se/bedrag-ii/bedrag-ii-9-10" class="ga-event-button" title="Bedrag II (9:10)">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582ef91e6187a4167404991a"><img alt="" src="http://www.dr.dk/mu/bar/582ef91e6187a4167404991a"></img></noscript>
+            </span>
+                <span class="dr-logo small-logo dr-logo-dr1-appendix-large"></span>
+            <div class="box">
+                
+                    <p>Bedrag II (9:10)</p>
+                        <h3>Der sker voldsomme ting i Mads&#39; liv</h3>
+            </div>
+        </a>
+</article>
+                </div>
+            </div>
+        </section>
+        <section class="spots radioSpot">
+            <div class="row">
+                <header>
+                    <h2><a href="http://www.dr.dk/radio/">Hør Radio</a></h2>
+					<a href="http://www.dr.dk/radio/" class="dr-icon-link-boxed section-link">Radio</a>
+                </header>
+                
+                
+                    <div class="col heading-medium span-4 singleSpot">
+                        
+
+
+
+
+
+<article class="dr-spot header-medium no-links">
+    
+        <a href="/radio/ondemand/p1/p1-morgen-2016-11-21#!/02:17:31" rel="dr-netradio-launch" title="P1 Morgen">
+            <span class="image-wrap ratio-16-9 dr-icon-audio-large-boxed">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/5832b6c26187a415c80a5869"><img alt="" src="http://www.dr.dk/mu/bar/5832b6c26187a415c80a5869"></img></noscript>
+            </span>
+            <div class="box">
+                <span class="dr-logo-p1d-small"></span>
+                    <p>P1 Morgen</p>
+                    <h3>Minister: Pulje med 200 millioner kroner skal skaffe bedre bredb&#229;nd</h3>
+            </div>
+        </a>
+        <div class="box">
+            <a class="section-link dr-icon-audio" title="Hør program" rel="dr-netradio-launch" href="/radio/ondemand/p1/p1-morgen-2016-11-21#!/02:17:31">Hør program</a>     
+        </div>
+</article>
+                    </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <div id="marketing-banner-1" class="bg-marketing">
+    </div>
+</div>
+<div id="df-9-e4b37cbe" class="df-article df-width-66 df-left df-row-1 df-skin-03-nyheder-theme">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-left" style="width: 236px;"><div class="df-img-container-inner"><a title="Guide: Sådan finder du den rigtige hastighed på dit bredbånd" href="http://www.dr.dk/nyheder/penge/guide-saadan-finder-du-den-rigtige-bredbaandshastighed" class="image-wrap ratio-236-170" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3238112.jpg?t%5Bcrop%5D%5Bwidth%5D=1724&t%5Bcrop%5D%5Bheight%5D=1242&t%5Bcrop%5D%5Bx%5D=256&t%5Bcrop%5D%5By%5D=37&t%5Bresize%5D%5Bwidth%5D=236&t%5Bresize%5D%5Bheight%5D=170&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=5fdc073b14ff11608a039482f9c76c44fa9137a044ef83cdcf0b43af3d693dfb" data-width="236" data-height="170" data-alt=""><img alt="" title="Photography: " width="236" height="170" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3238112.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1724%26t%255Bcrop%255D%255Bheight%255D%3d1242%26t%255Bcrop%255D%255Bx%255D%3d256%26t%255Bcrop%255D%255By%255D%3d37%26t%255Bresize%255D%255Bwidth%255D%3d236%26t%255Bresize%255D%255Bheight%255D%3d170%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d5fdc073b14ff11608a039482f9c76c44fa9137a044ef83cdcf0b43af3d693dfb&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/guide-saadan-finder-du-den-rigtige-bredbaandshastighed" title="Guide: Sådan finder du den rigtige hastighed på dit bredbånd"><span class="df-fs-42 df-blk"><span class="df-style-label-red">Guide:</span> Sådan finder du den rigtige hastighed på dit bredbånd</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/penge/guide-saadan-finder-du-den-rigtige-bredbaandshastighed">Danskernes internetforbrug vokser med 40 procent om året. Især fredag aften streamer danskerne løs, forklarer teledirektør.</a></span></p><ul class="related"><li><a href="//www.dr.dk/nyheder/penge/smalt-bredbaand-vi-streamer-alle-spaadomme-ihjel" data-original-id="urn:dr:drupal:article:43ff09e1-ee30-4fed-8219-c2b6a856382b"><span class="label">Læs også:</span> For smalt bredbånd: Vi streamer alle spådomme ihjel</a></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-q8e2d205" class="df-article df-width-66 df-left df-row-1 df-skin-03-nyheder-theme">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-right" style="width: 224px;"><div class="df-img-container-inner"><a title="GRAFIK Se, om du bor i et bredbåndshul" href="http://www.dr.dk/nyheder/penge/grafik-se-om-du-bor-i-et-bredbaandshul" class="image-wrap ratio-224-78" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237823.jpg?t%5Bcrop%5D%5Bwidth%5D=556&t%5Bcrop%5D%5Bheight%5D=193&t%5Bcrop%5D%5Bx%5D=64&t%5Bcrop%5D%5By%5D=92&t%5Bresize%5D%5Bwidth%5D=224&t%5Bresize%5D%5Bheight%5D=78&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=ee6fc17613237843001e3222d394bc47308b79a52ece308a140e82cfbe465d4b" data-width="224" data-height="78" data-alt=""><img alt="" title="Photography: " width="224" height="78" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237823.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d556%26t%255Bcrop%255D%255Bheight%255D%3d193%26t%255Bcrop%255D%255Bx%255D%3d64%26t%255Bcrop%255D%255By%255D%3d92%26t%255Bresize%255D%255Bwidth%255D%3d224%26t%255Bresize%255D%255Bheight%255D%3d78%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dee6fc17613237843001e3222d394bc47308b79a52ece308a140e82cfbe465d4b&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/grafik-se-om-du-bor-i-et-bredbaandshul" title="GRAFIK Se, om du bor i et bredbåndshul"><span class="df-fs-30 df-blk"><span class="df-style-label-red">GRAFIK</span> Se, om du bor i et bredbåndshul</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-m4103183" class="df-article df-width-66 df-left df-row-1 df-skin-30-tema-header">
+	
+	<div class="df-article-content">
+		<div class="text-header"><h1>Ny regering <span>forhandlinger i dag</span></h1></div><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-la6435d1" class="df-article df-width-66 df-left df-row-1 df-skin-03-nyheder-theme">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-left df-skin-icon-video" style="width: 221px;"><div class="df-img-container-inner"><a title="Løkke: Nu tager vi et blankt stykke papir og skriver nyt regeringsgrundlag" href="http://www.dr.dk/nyheder/politik/loekke-nu-tager-vi-et-blankt-stykke-papir-og-skriver-nyt-regeringsgrundlag" class="image-wrap ratio-221-201" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237721.jpg?t%5Bcrop%5D%5Bwidth%5D=819&t%5Bcrop%5D%5Bheight%5D=745&t%5Bcrop%5D%5Bx%5D=182&t%5Bcrop%5D%5By%5D=11&t%5Bresize%5D%5Bwidth%5D=221&t%5Bresize%5D%5Bheight%5D=201&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=aa346f5060d7120b7377f0aeec6363504d85c224cd0c89220a826deef453c8e3" data-width="221" data-height="201" data-alt=""><img alt="" title="Photography: " width="221" height="201" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237721.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d819%26t%255Bcrop%255D%255Bheight%255D%3d745%26t%255Bcrop%255D%255Bx%255D%3d182%26t%255Bcrop%255D%255By%255D%3d11%26t%255Bresize%255D%255Bwidth%255D%3d221%26t%255Bresize%255D%255Bheight%255D%3d201%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3daa346f5060d7120b7377f0aeec6363504d85c224cd0c89220a826deef453c8e3&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/politik/loekke-nu-tager-vi-et-blankt-stykke-papir-og-skriver-nyt-regeringsgrundlag" title="Løkke: Nu tager vi et blankt stykke papir og skriver nyt regeringsgrundlag"><span class="df-fs-36 df-blk"><span class="df-style-label-red">Løkke:</span> Nu tager vi et blankt stykke papir og skriver nyt regeringsgrundlag</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/politik/loekke-nu-tager-vi-et-blankt-stykke-papir-og-skriver-nyt-regeringsgrundlag">Tirsdag begynder Venstre, Liberal Alliance og De Konservative at skrive regeringsgrundlaget.</a></span></p><ul class="related"><li><a href="https://www.dr.dk/nyheder/politik/samuelsen-vores-topskattekrav-kommer-ikke-med-i-regeringsgrundlaget" data-original-id="urn:dr:drupal:article:dffa01ed-8265-43c4-ba34-68019bcb2d89"><span class="label">LÆS OGSÅ:</span> LA: Topskattekrav kommer ikke med i regeringsgrundlaget</a></li><li><p><span class="df-fs-18 df-blk"><a href="http://www.dr.dk/nyheder/politik/pape-vil-finde-alle-sine-ministre-i-folketingsgruppen" title="Pape vil finde alle sine ministre i folketingsgruppen"><span class="df-style-label-red">LÆS OGSÅ</span> Pape forventer at finde sine ministre i folketingsgruppen</a></span></p></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-j328d99f" class="df-article df-width-33 df-right df-row-1 df-skin-03-nyheder-theme">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-video" style="width: 300px;"><div class="df-img-container-inner"><a title="Samuelsens topskattekrav: Fra ultimativt til ikke-eksisterende" href="http://www.dr.dk/nyheder/politik/samuelsens-topskattekrav-fra-ultimativt-til-ikke-eksisterende" id="ui-id-41" class="image-wrap ratio-300-104" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237848.jpg?t%5Bcrop%5D%5Bwidth%5D=1823&t%5Bcrop%5D%5Bheight%5D=632&t%5Bcrop%5D%5Bx%5D=43&t%5Bcrop%5D%5By%5D=207&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=104&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=d6dbadd71606bd9733112129a8088d4a5386055844de9cd83277e390b427ea1c" data-width="300" data-height="104" data-alt=""><img title="Photography: " alt="" width="300" height="104" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237848.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1823%26t%255Bcrop%255D%255Bheight%255D%3d632%26t%255Bcrop%255D%255Bx%255D%3d43%26t%255Bcrop%255D%255By%255D%3d207%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d104%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dd6dbadd71606bd9733112129a8088d4a5386055844de9cd83277e390b427ea1c&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/politik/samuelsens-topskattekrav-fra-ultimativt-til-ikke-eksisterende" title="Samuelsens topskattekrav: Fra ultimativt til ikke-eksisterende"><span class="df-fs-24 df-blk">Samuelsens topskattekrav: Fra ultimativt til ikke-eksisterende</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-gd60e095" class="df-article df-width-33 df-left df-row-1 df-skin-03-nyheder-theme">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-left" style="width: 140px;"><div class="df-img-container-inner"><a title="AFSTEMNING Hvad bliver den vigtigste opgave for en ny trekløverregering?" href="http://www.dr.dk/nyheder/politik/afstemning-hvad-bliver-den-vigtigste-opgave-en-ny-trekloeverregering" id="ui-id-9" class="image-wrap ratio-140-88" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237440.jpg?t%5Bcrop%5D%5Bwidth%5D=1071&t%5Bcrop%5D%5Bheight%5D=673&t%5Bcrop%5D%5Bx%5D=275&t%5Bcrop%5D%5By%5D=161&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=81c75127edbe7ac61b62672e4c83e4a66db69ce3583b15e1ea2c1fa47253eceb" data-width="140" data-height="88" data-alt=""><img alt="" title="Photography: " width="140" height="88" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237440.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1071%26t%255Bcrop%255D%255Bheight%255D%3d673%26t%255Bcrop%255D%255Bx%255D%3d275%26t%255Bcrop%255D%255By%255D%3d161%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d81c75127edbe7ac61b62672e4c83e4a66db69ce3583b15e1ea2c1fa47253eceb&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/politik/afstemning-hvad-bliver-den-vigtigste-opgave-en-ny-trekloeverregering" title="AFSTEMNING Hvad bliver den vigtigste opgave for en ny trekløverregering?"><span class="df-fs-18 df-blk"><span class="df-style-label-red">AFSTEMNING</span> Hvad er den vigtigste opgave for en ny regering?</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-lb81dd62" class="df-article df-width-33 df-left df-row-1 df-skin-31-tema-footer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-left" style="width: 140px;"><div class="df-img-container-inner"><span class="df-fs-11"><a title="OVERBLIK Her er knasterne for en ny trekløverregering" href="http://www.dr.dk/nyheder/politik/overblik-her-er-knasterne-en-ny-trekloeverregering"><span class=" df-fs-11 image-wrap ratio-140-80" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236524.jpg?t%5Bcrop%5D%5Bwidth%5D=617&t%5Bcrop%5D%5Bheight%5D=353&t%5Bcrop%5D%5Bx%5D=304&t%5Bcrop%5D%5By%5D=163&t%5Bresize%5D%5Bwidth%5D=140&t%5Bresize%5D%5Bheight%5D=80&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=7210eb2410ade8e1f2b239832cb0901a1ee69fb31f422a5464f5690d72be5985" data-width="140" data-height="80" data-alt=""><img alt="" title="Photography: " width="140" height="80" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236524.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d617%26t%255Bcrop%255D%255Bheight%255D%3d353%26t%255Bcrop%255D%255Bx%255D%3d304%26t%255Bcrop%255D%255By%255D%3d163%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bresize%255D%255Bheight%255D%3d80%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d7210eb2410ade8e1f2b239832cb0901a1ee69fb31f422a5464f5690d72be5985&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></span></a></span></div></div><h1><a href="http://www.dr.dk/nyheder/politik/overblik-her-er-knasterne-en-ny-trekloeverregering" title="OVERBLIK Her er knasterne for en ny trekløverregering"><span class="df-fs-18 df-blk"><span class="df-style-label-red">OVERBLIK</span> Her er knasterne for en ny trekløver-regering</span></a></h1><ul class="related"></ul><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-a5b8a9b2" class="df-article df-width-66 df-left df-row-1 df-skin-31-tema-footer">
+	
+	<div class="df-article-content">
+		<div class="text-footer"></div><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-g04c142d" class="df-article df-width-66 df-left df-row-1 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="Briter i Spanien smider tøjet i kampen mod Brexit" href="http://www.dr.dk/nyheder/udland/briter-i-spanien-smider-toejet-i-kampen-mod-brexit" class="image-wrap ratio-620-218" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237918.jpg?t%5Bcrop%5D%5Bwidth%5D=1920&t%5Bcrop%5D%5Bheight%5D=675&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=81&t%5Bresize%5D%5Bwidth%5D=620&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=6aa307f7652726513a7b5068b3f67e32f798de7292da5b1680d7e64ff4500140" data-width="620" data-height="218" data-alt=""><img alt="" title="Photography: " width="620" height="218" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237918.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1920%26t%255Bcrop%255D%255Bheight%255D%3d675%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d81%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d6aa307f7652726513a7b5068b3f67e32f798de7292da5b1680d7e64ff4500140&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/briter-i-spanien-smider-toejet-i-kampen-mod-brexit" title="Briter i Spanien smider tøjet i kampen mod Brexit">Briter i Spanien smider tøjet i kampen mod Brexit</a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/udland/briter-i-spanien-smider-toejet-i-kampen-mod-brexit">I Spanien bor der omtrent 800.000 britiske statsborgere - og mange af dem kæmper for at kunne blive i Spanien efter det britiske nej til EU.</a></span></p><div class="df-clearer"></div>
+	</div>
+	
+</div>
+		
+	</div>
+</div><div id="df-9-l9db1ef0" class="df-container df-row-2 df-skin-default df-container-locked">
+	<div class="df-container-inner">
+		
+		
+
+<div class="df-article df-width-33 df-right df-skin-white ">
+    <section class="cms-list" >
+        <header class="heading-small">
+            <h2>
+                    <span>Seneste</span>
+                Nyheder og sport
+            </h2>
+        </header>
+
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/indland/politiet-anholder-otte-maend-i-stor-bandeaktion-i-herning">Politiet anholder otte m&#230;nd i stor bandeaktion i Herning</a></h3>
+                <time class="metainfo" datetime="2016-11-21T16:23:00Z">Kl. 17:23</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/penge/guide-saadan-finder-du-den-rigtige-hastighed-paa-dit-bredbaand">Guide: S&#229;dan finder du den rigtige hastighed p&#229; dit bredb&#229;nd</a></h3>
+                <time class="metainfo" datetime="2016-11-21T16:04:00Z">Kl. 17:04</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/regionale/nordjylland/vognmaend-vil-ikke-saette-dyrt-sikkerhedsudstyr-i-gamle-lastbiler">Vognm&#230;nd vil ikke s&#230;tte dyrt sikkerhedsudstyr i gamle lastbiler</a></h3>
+                <time class="metainfo" datetime="2016-11-21T16:00:00Z">Kl. 17:00</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/sporten/oevrig/danske-curlingmaend-lider-nyt-em-nederlag">Danske curlingm&#230;nd lider nyt EM-nederlag</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:51:00Z">Kl. 16:51</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/viden/naturvidenskab/ny-bog-afsloerer-dyrenes-hemmelige-liv">Ny bog afsl&#248;rer dyrenes hemmelige liv</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:31:00Z">Kl. 16:31</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/penge/borgmester-beder-om-bredbaandshjaelp-faxe-kommune-mangler-hurtigt-internet">Borgmester beder om bredb&#229;ndshj&#230;lp: Faxe Kommune mangler hurtigt internet</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:30:00Z">Kl. 16:30</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/indland/seks-elever-har-foelt-sig-kraenket-af-efterskolelaerer">Seks elever har f&#248;lt sig kr&#230;nket af efterskolel&#230;rer</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:30:00Z">Kl. 16:30</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/udland/canada-lukker-alle-kulkraftvaerker-naa-fn-klimamaal">Canada lukker alle kulkraftv&#230;rker for at n&#229; FN-klimam&#229;l</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:11:00Z">Kl. 16:11</time>
+            </article>
+            <article class="heading-xsmall">
+                <h3 class=""><a class="dr-icon-link-boxed" href="http://www.dr.dk/nyheder/indland/politiet-bruger-peber-paa-faerre-og-faerre">Politiet bruger peber p&#229; f&#230;rre og f&#230;rre</a></h3>
+                <time class="metainfo" datetime="2016-11-21T15:01:00Z">Kl. 16:01</time>
+            </article>
+        <footer>
+            <a href="http://www.dr.dk/nyheder">Se hele overblikket</a>
+        </footer>
+    </section>
+</div>
+
+<div id="df-9-v52d5616" class="df-article df-width-33 df-left df-row-2 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Apple erkender batterifejl på iPhone 6s: Tjek om din telefon kan være ramt" href="http://www.dr.dk/nyheder/viden/tech/apple-erkender-batterifejl-paa-iphone-6s-tjek-om-din-telefon-kan-vaere-ramt" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237846.jpg?t%5Bcrop%5D%5Bwidth%5D=2000&t%5Bcrop%5D%5Bheight%5D=853&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=f3bdd3c4287641481aa1777fa29dbbda596d785ad047d4aa583ce06d22291074" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237846.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2000%26t%255Bcrop%255D%255Bheight%255D%3d853%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3df3bdd3c4287641481aa1777fa29dbbda596d785ad047d4aa583ce06d22291074&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Apple erkender batterifejl på iPhone 6s: Tjek om din telefon kan være ramt" href="http://www.dr.dk/nyheder/viden/tech/apple-erkender-batterifejl-paa-iphone-6s-tjek-om-din-telefon-kan-vaere-ramt">Apple erkender batterifejl på iPhone 6s: Tjek om din telefon kan være ramt</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-pe9630df" class="df-article df-width-33 df-left df-row-2 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Litteraturprofessor: En af vores tids mest oversete danske forfattere" href="http://www.dr.dk/nyheder/kultur/boeger/litteraturprofessor-en-af-vores-tids-mest-oversete-danske-forfattere" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237953.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=862&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=128&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=254f04e272bb1e40d2fd44290bc456db717d5854aa191c35271e35829f6000a2" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237953.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d862%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d128%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d254f04e272bb1e40d2fd44290bc456db717d5854aa191c35271e35829f6000a2&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Litteraturprofessor: En af vores tids mest oversete danske forfattere" href="http://www.dr.dk/nyheder/kultur/boeger/litteraturprofessor-en-af-vores-tids-mest-oversete-danske-forfattere"><span class="df-style-label-red">Litteraturprofessor:</span> En af vores tids mest oversete danske forfattere</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-b6d085e6" class="df-article df-width-66 df-left df-row-2 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-left" style="width: 220px;"><div class="df-img-container-inner"><a title="Test dig selv: Hvor enig er du med paven?" href="http://www.dr.dk/nyheder/udland/test-dig-selv-hvor-enig-er-du-med-paven" class="image-wrap ratio-220-151" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237907.jpg?t%5Bcrop%5D%5Bwidth%5D=1576&t%5Bcrop%5D%5Bheight%5D=1082&t%5Bcrop%5D%5Bx%5D=57&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=220&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=426a4eb1c643ff786111e71a0d35505b218a633988a8ba6cd0492665d9d1d3f3" data-width="220" data-height="151" data-alt=""><img alt="" title="Photography: " width="220" height="151" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237907.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1576%26t%255Bcrop%255D%255Bheight%255D%3d1082%26t%255Bcrop%255D%255Bx%255D%3d57%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d220%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d426a4eb1c643ff786111e71a0d35505b218a633988a8ba6cd0492665d9d1d3f3&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/test-dig-selv-hvor-enig-er-du-med-paven" title="Test dig selv: Hvor enig er du med paven?"><span class="df-style-label-red">Test dig selv:</span> Hvor enig er du med paven?</a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/udland/test-dig-selv-hvor-enig-er-du-med-paven">Pave Frans har åbnet for, at der kan gives syndsforladelse for abort. Test om du er enig i andre udmeldinger fra den 266. pave.</a></span></p><ul class="related"><li><a href="//www.dr.dk/nyheder/udland/paven-praester-kan-tilgive-kvinder-der-har-faaet-abort" data-original-id="urn:dr:drupal:article:4b9edd79-8a2a-4136-91c0-0ce587b6955f"><span class="label">Læs også:</span> Paven: Præster kan tilgive kvinder der har fået abort</a></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-pa3315aa" class="df-article df-width-33 df-right df-row-2 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="VIDEO Prut vækker harme i parlament" href="http://www.dr.dk/nyheder/udland/video-prut-vaekker-harme-i-parlament" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237851.jpg?t%5Bcrop%5D%5Bwidth%5D=731&t%5Bcrop%5D%5Bheight%5D=366&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=29&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=8fec90bc868dbadcddc38b75bbce010e1509ca4878ca4a394c7b46daaaa4e253" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237851.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d731%26t%255Bcrop%255D%255Bheight%255D%3d366%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d29%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d8fec90bc868dbadcddc38b75bbce010e1509ca4878ca4a394c7b46daaaa4e253&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/video-prut-vaekker-harme-i-parlament" title="VIDEO Prut vækker harme i parlament"><span class="df-style-label-red">VIDEO</span> Prut vækker harme i parlament</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-fd5835ad" class="df-article df-width-33 df-left df-row-2 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="SAS-analytiker: SAS er umådeligt presset" href="http://www.dr.dk/nyheder/penge/sas-analytiker-sas-er-umaadeligt-presset" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3238006.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=1010&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=337&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=cad1fa51e283d321627c0279ad213527600cbb94ef0f8fb9a295a29f43512948" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3238006.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d1010%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d337%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dcad1fa51e283d321627c0279ad213527600cbb94ef0f8fb9a295a29f43512948&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="SAS-analytiker: SAS er umådeligt presset" href="http://www.dr.dk/nyheder/penge/sas-analytiker-sas-er-umaadeligt-presset">SAS-analytiker: SAS er umådeligt presset</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+		
+	</div>
+</div><div id="df-9-7caa9c11" class="df-container df-autorow df-row-3 df-skin-default df-container-locked">
+	<div class="df-container-inner">
+		
+		
+<div id="marketing-banner-9" class="article-extract article-extract article-extract-full marketing-full-width">
+</div>
+<div class="df-article df-width-100 radioTVSpot tvSpot">
+    
+
+
+<section class="section-band">
+	<header class="heading-xxxlarge">
+				<a href="http://www.dr.dk/tv/oversigt" class="section-link dr-icon-guide">Tv-oversigten</a>
+				<h2><a href="http://www.dr.dk/tv" title="DR TV"><span class="dr-logo-drtv-large"></span></a></h2>
+	</header>
+	<div class="row">
+            <div class="col span-6" data-ga-index="1" data-ga-zone="tvZone">
+                
+
+
+
+
+
+<article class="dr-spot heading-xxxlarge no-links">
+    
+        <a href="http://www.dr.dk/tv/se/nak-aed-2016/nak-aed-en-baever-i-canada-7-10" class="ga-event-button" title="Nak &amp; &#198;d - en b&#230;ver i Canada (7:10)">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582efebd6187a41674049962"><img alt="" src="http://www.dr.dk/mu/bar/582efebd6187a41674049962"></img></noscript>
+                    <h3>Nu skal det v&#230;re: J&#248;rgen og Nikolaj vil smage b&#230;vergejl</h3>
+                    <div class="gradient-overlay show"></div>
+            </span>
+            <div class="box">
+                
+                    <p>Nak &amp; &#198;d - en b&#230;ver i Canada (7:10)</p>
+            </div>
+        </a>
+</article>
+            </div>
+            <div class="col span-6">
+                <div class="row">
+                    <div class="col span-3" data-ga-index="2" data-ga-zone="tvZone">
+
+
+
+
+
+
+<article class="dr-spot heading-medium no-links">
+    
+        <a href="http://www.dr.dk/tv/se/kronprinsparrets-kobberbryllup/frederik-og-mary-12-ar-med-kronprinsparret" class="ga-event-button" title="Frederik og Mary - 12&#189; &#229;r med Kronprinsparret">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/5829962d6187a410805fe8fa"><img alt="" src="http://www.dr.dk/mu/bar/5829962d6187a410805fe8fa"></img></noscript>
+            </span>
+                <span class="dr-logo small-logo dr-logo-dr1-appendix-large"></span>
+            <div class="box">
+                
+                    <p>Frederik og Mary - 12&#189; &#229;r med Kronprinsparret</p>
+            </div>
+        </a>
+</article>                    </div>
+                    <div class="col span-3" data-ga-index="3" data-ga-zone="tvZone">
+
+
+
+
+
+
+<article class="dr-spot heading-medium no-links">
+    
+        <a href="http://www.dr.dk/tv/se/hoejdepunkter-fra-dr2/vi-ses-hos-clement-69" class="ga-event-button" title="Vi ses hos Clement: Lars H.U.G, Amalie Lyhne og Jakob Sheikh">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/5832b1006187a415c80a581d"><img alt="" src="http://www.dr.dk/mu/bar/5832b1006187a415c80a581d"></img></noscript>
+            </span>
+                <span class="dr-logo small-logo dr-logo-dr2-appendix-large"></span>
+            <div class="box">
+                
+                    <p>Vi ses hos Clement: Lars H.U.G, Amalie Lyhne og Jakob Sheikh</p>
+            </div>
+        </a>
+</article>                    </div>
+            </div>
+            <div class="row">
+                    <div class="col span-3" data-ga-index="4" data-ga-zone="tvZone">
+
+
+
+
+
+
+<article class="dr-spot heading-medium no-links">
+    
+        <a href="http://www.dr.dk/tv/se/ditte-og-louise-saeson-2/ditte-louise-ll-4-8" class="ga-event-button" title="Ditte &amp; Louise II (4:8)">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582c7cb16187a507d8c9eb8c"><img alt="" src="http://www.dr.dk/mu/bar/582c7cb16187a507d8c9eb8c"></img></noscript>
+            </span>
+                <span class="dr-logo small-logo dr-logo-dr1-appendix-large"></span>
+            <div class="box">
+                
+                    <p>Ditte &amp; Louise II (4:8)</p>
+            </div>
+        </a>
+</article>                    </div>
+                    <div class="col span-3" data-ga-index="5" data-ga-zone="tvZone">
+
+
+
+
+
+
+<article class="dr-spot heading-medium no-links">
+    
+        <a href="http://www.dr.dk/tv/se/militaerbase-for-milliarder-lukningen-af-camp-bastion/dr3-dok-militaerbase-for-milliarder-lukningen-af-camp-bastion" class="ga-event-button" title="DR3 Dok: Milit&#230;rbase for milliarder - lukningen af Camp Bastion">
+            <span class="image-wrap ratio-16-9 ">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582da0206187a41074782bf3"><img alt="" src="http://www.dr.dk/mu/bar/582da0206187a41074782bf3"></img></noscript>
+            </span>
+                <span class="dr-logo small-logo dr-logo-dr3-appendix-large"></span>
+            <div class="box">
+                
+                    <p>DR3 Dok: Milit&#230;rbase for milliarder - lukningen af Camp Bastion</p>
+                        <h3>Britisk dokumentar fra 2015.</h3>
+            </div>
+        </a>
+</article>                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+</div>
+
+<div id="marketing-banner-8" class="article-extract article-extract article-extract-full marketing-full-width">
+</div>		
+	</div>
+</div><div id="df-9-n1345308" class="df-article df-width-33 df-right df-row-4 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Borgmester beder om bredbåndshjælp: Faxe Kommune mangler hurtigt internet" href="http://www.dr.dk/nyheder/penge/borgmester-beder-om-bredbaandshjaelp-faxe-kommune-mangler-hurtigt-internet" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3238056.jpg?t%5Bcrop%5D%5Bwidth%5D=973&t%5Bcrop%5D%5Bheight%5D=415&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=78b16937567fc7ea730ce031213cca4e6f8a5810913f383f5f4b5ccfae9475eb" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3238056.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d973%26t%255Bcrop%255D%255Bheight%255D%3d415%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d78b16937567fc7ea730ce031213cca4e6f8a5810913f383f5f4b5ccfae9475eb&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/borgmester-beder-om-bredbaandshjaelp-faxe-kommune-mangler-hurtigt-internet" title="Borgmester beder om bredbåndshjælp: Faxe Kommune mangler hurtigt internet">Borgmester beder om bredbåndshjælp: Faxe mangler hurtigt internet</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-j7285f7d" class="df-article df-width-33 df-left df-row-4 df-skin-04-nyheder-grey">
+	
+	<div class="df-article-content">
+		<h1><a title="Seks elever har følt sig krænket af efterskolelærer" href="http://www.dr.dk/nyheder/indland/seks-elever-har-foelt-sig-kraenket-af-efterskolelaerer"><span class="df-fs-30 df-blk">Seks elever har følt sig krænket af efterskolelærer</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-s12af842" class="df-article df-width-33 df-left df-row-4 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Ny bog afslører dyrenes hemmelige liv" href="http://www.dr.dk/nyheder/viden/naturvidenskab/ny-bog-afsloerer-dyrenes-hemmelige-liv" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3238072.jpg?t%5Bcrop%5D%5Bwidth%5D=885&t%5Bcrop%5D%5Bheight%5D=443&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=666fdc3ed026949a9288e9c2220082a6b268fbbb8f7ff410a2acc6977260f096" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3238072.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d885%26t%255Bcrop%255D%255Bheight%255D%3d443%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d666fdc3ed026949a9288e9c2220082a6b268fbbb8f7ff410a2acc6977260f096&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Ny bog afslører dyrenes hemmelige liv" href="http://www.dr.dk/nyheder/viden/naturvidenskab/ny-bog-afsloerer-dyrenes-hemmelige-liv">Ny bog afslører dyrenes hemmelige liv</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-ba142096" class="df-article df-width-66 df-right df-row-5 df-skin-01-nyheder-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="Puk Damsgård i Irak: Fadiyas jagt på sin engelskordbog" href="http://www.dr.dk/nyheder/udland/puk-damsgaard-i-irak-fadiyas-jagt-paa-sin-engelskordbog" class="image-wrap ratio-620-228" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237292.jpg?t%5Bcrop%5D%5Bwidth%5D=3840&t%5Bcrop%5D%5Bheight%5D=1412&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=161&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=228&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=36694a220e2f0c50244b5a67e7e462ebe6a44b3eb256a76631e5644d67b92315" data-width="620" data-height="228" data-alt=""><img alt="" title="Photography: " width="620" height="228" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237292.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d3840%26t%255Bcrop%255D%255Bheight%255D%3d1412%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d161%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d228%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d36694a220e2f0c50244b5a67e7e462ebe6a44b3eb256a76631e5644d67b92315&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/puk-damsgaard-i-irak-fadiyas-jagt-paa-sin-engelskordbog" title="Puk Damsgård i Irak: Fadiyas jagt på sin engelskordbog"><span class="df-fs-43 df-blk"><span class="df-style-label-red">Puk Damsgård i Irak:</span> Fadiyas jagt på sin engelsk-ordbog</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/udland/puk-damsgaard-i-irak-fadiyas-jagt-paa-sin-engelskordbog">Mellemøst-korrespondent Puk Damsgård har fulgt en kvinde på sit første besøg til en by, som er blevet befriet fra Islamisk Stat.</a></span></p><ul class="related"><li><a href="//www.dr.dk/nyheder/udland/offensiv-mod-mosul-det-store-slag-om-kalifatets-hjerte" data-original-id="urn:dr:drupal:article:d146d0c4-815e-46ee-8134-bb8b9ad63dfd"><span class="df-style-label-red">Offensiv mod Mosul</span> Det store slag om kalifatets hjerte</a></li><li><a href="//www.dr.dk/nyheder/udland/dr-bag-fronten-ved-mosul-indenfor-hos-islamisk-stat" data-original-id="urn:dr:drupal:article:e1ae8d50-d284-48be-a9a7-e57b394ac709"><span class="df-style-label-red">DR bag fronten ved Mosul</span> Indenfor hos Islamisk Stat</a></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-d0404a7c" class="df-article df-width-33 df-left df-row-5 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Fugleinfluenza i dansk besætning kan ramme branchen hårdt" href="http://www.dr.dk/nyheder/indland/fugleinfluenza-i-dansk-besaetning-kan-ramme-branchen-haardt" id="ui-id-46" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237401.jpg?t%5Bcrop%5D%5Bwidth%5D=1435&t%5Bcrop%5D%5Bheight%5D=612&t%5Bcrop%5D%5Bx%5D=91&t%5Bcrop%5D%5By%5D=120&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=6873921ba3718b021461fb08653bf63fac6d42906663b5bfe53bd587fb961e7b" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: Scanpix" width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237401.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1435%26t%255Bcrop%255D%255Bheight%255D%3d612%26t%255Bcrop%255D%255Bx%255D%3d91%26t%255Bcrop%255D%255By%255D%3d120%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d6873921ba3718b021461fb08653bf63fac6d42906663b5bfe53bd587fb961e7b&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/fugleinfluenza-i-dansk-besaetning-kan-ramme-branchen-haardt" title="Fugleinfluenza i dansk besætning kan ramme branchen hårdt"><span class="df-fs-24 df-blk">Fugleinfluenza i dansk besætning kan ramme branchen hårdt</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-c20dc879" class="df-article df-width-33 df-left df-row-5 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Fransk politi har forhindret nyt terrorangreb" href="http://www.dr.dk/nyheder/udland/fransk-politi-har-forhindret-nyt-terrorangreb" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237312.jpg?t%5Bcrop%5D%5Bwidth%5D=3016&t%5Bcrop%5D%5Bheight%5D=1508&t%5Bcrop%5D%5Bx%5D=30&t%5Bcrop%5D%5By%5D=201&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=0619be96b05a23d86d4d59bd13f8757e937a84868868ce96af0819118934ea9c" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: Scanpix Denmark" width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237312.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d3016%26t%255Bcrop%255D%255Bheight%255D%3d1508%26t%255Bcrop%255D%255Bx%255D%3d30%26t%255Bcrop%255D%255By%255D%3d201%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d0619be96b05a23d86d4d59bd13f8757e937a84868868ce96af0819118934ea9c&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/fransk-politi-har-forhindret-nyt-terrorangreb" title="Fransk politi har forhindret nyt terrorangreb">Fransk politi har forhindret nyt terrorangreb</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-g17a5144" class="df-article df-width-33 df-left df-row-6 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Sundhedstjek skal redde syg kronesmiley" href="http://www.dr.dk/nyheder/penge/sundhedstjek-skal-redde-syg-kronesmiley" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237311.jpg?t%5Bcrop%5D%5Bwidth%5D=1814&t%5Bcrop%5D%5Bheight%5D=907&t%5Bcrop%5D%5Bx%5D=103&t%5Bcrop%5D%5By%5D=127&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=22410b8ab7036a2399de1ee13cecc160a854ed100cb032d1f3b0f60d71096cbc" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237311.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1814%26t%255Bcrop%255D%255Bheight%255D%3d907%26t%255Bcrop%255D%255Bx%255D%3d103%26t%255Bcrop%255D%255By%255D%3d127%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d22410b8ab7036a2399de1ee13cecc160a854ed100cb032d1f3b0f60d71096cbc&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/sundhedstjek-skal-redde-syg-kronesmiley" title="Sundhedstjek skal redde syg kronesmiley">Sundhedstjek skal redde syg kronesmiley</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-p853aae3" class="df-article df-width-16 df-left df-row-6 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 140px;"><div class="df-img-container-inner"><a title="Politisk analytiker: Marienborg-forhandlinger kommer til at tage mere end en formiddag" href="http://www.dr.dk/nyheder/politik/politisk-analytiker-marienborg-forhandlinger-kommer-til-tage-mere-end-en-formiddag" id="ui-id-34" class="image-wrap ratio-140-109" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3233133.jpg?t%5Bcrop%5D%5Bwidth%5D=1003&t%5Bcrop%5D%5Bheight%5D=781&t%5Bcrop%5D%5Bx%5D=494&t%5Bcrop%5D%5By%5D=186&t%5Bresize%5D%5Bwidth%5D=140&t%5Bresize%5D%5Bheight%5D=109&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=4d0550ef25a634b8c1e02b0ed121436a1c202ebd8db809ece415317fcc5d752b" data-width="140" data-height="109" data-alt=""><img alt="" title="Photography: " width="140" height="109" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3233133.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1003%26t%255Bcrop%255D%255Bheight%255D%3d781%26t%255Bcrop%255D%255Bx%255D%3d494%26t%255Bcrop%255D%255By%255D%3d186%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bresize%255D%255Bheight%255D%3d109%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d4d0550ef25a634b8c1e02b0ed121436a1c202ebd8db809ece415317fcc5d752b&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/politik/politisk-analytiker-marienborg-forhandlinger-kommer-til-tage-mere-end-en-formiddag" title="Politisk analytiker: Marienborg-forhandlinger kommer til at tage mere end en formiddag"><span class="df-fs-18"><span class="df-style-label-red">Analytiker:<br /></span> Marienborg-<br />møder tager mere end en formiddag</span></a></h1><ul class="related"></ul><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-y763a268" class="df-article df-width-16 df-left df-row-6 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 140px;"><div class="df-img-container-inner"><a title="Boligrenterne trodser Trump" href="http://www.dr.dk/nyheder/penge/boligrenterne-trodser-trump" class="image-wrap ratio-140-141" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/2689932.jpg?t%5Bcrop%5D%5Bwidth%5D=1200&t%5Bcrop%5D%5Bheight%5D=1209&t%5Bcrop%5D%5Bx%5D=414&t%5Bcrop%5D%5By%5D=78&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=aa7c21cb7112e6b76954f18a0f38f2101ee810fd7b5c452c9ffb2fa23037571a" data-width="140" data-height="141" data-alt=""><img alt="" title="Photography: " width="140" height="141" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f2689932.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1200%26t%255Bcrop%255D%255Bheight%255D%3d1209%26t%255Bcrop%255D%255Bx%255D%3d414%26t%255Bcrop%255D%255By%255D%3d78%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3daa7c21cb7112e6b76954f18a0f38f2101ee810fd7b5c452c9ffb2fa23037571a&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/boligrenterne-trodser-trump" title="Boligrenterne trodser Trump">Boligrenterne trodser Trump</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-lc63915b" class="df-article df-width-33 df-left df-row-6 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="OVERBLIK Disse sæder er bekræftet i Formel 1" href="http://www.dr.dk/sporten/oevrig/overblik-disse-saeder-er-bekraeftet-i-formel-1" class="image-wrap ratio-300-153" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237091.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=1030&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=249&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=74c66209da2037f4b5ae69d34ce2f88a91b3c857cd664b9d81bfcb6452670341" data-width="300" data-height="153" data-alt=""><img alt="" title="Photography: " width="300" height="153" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237091.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d1030%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d249%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d74c66209da2037f4b5ae69d34ce2f88a91b3c857cd664b9d81bfcb6452670341&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/sporten/oevrig/overblik-disse-saeder-er-bekraeftet-i-formel-1" title="OVERBLIK Disse sæder er bekræftet i Formel 1"><span class="df-style-label-red">OVERBLIK</span> Disse sæder er bekræftet i Formel 1</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-s0ce3ccd" class="df-article df-width-66 df-left df-row-7 df-skin-01-nyheder-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-audio" style="width: 620px;"><div class="df-img-container-inner"><a title="INTERVIEW Solbakken: Jeg har nået maksimum med dette hold" href="http://www.dr.dk/sporten/fodbold/championsleague/interview-solbakken-jeg-har-naaet-maksimum-med-dette-hold" class="image-wrap ratio-620-318" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236407.jpg?t%5Bcrop%5D%5Bwidth%5D=1842&t%5Bcrop%5D%5Bheight%5D=945&t%5Bcrop%5D%5Bx%5D=89&t%5Bcrop%5D%5By%5D=276&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=318&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=1d2a3a908fdf14fe382f86a677c7d8bc58ffe2c78b3cd28d698c52e251bb84f4" data-width="620" data-height="318" data-alt=""><img alt="" title="Photography: " width="620" height="318" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236407.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1842%26t%255Bcrop%255D%255Bheight%255D%3d945%26t%255Bcrop%255D%255Bx%255D%3d89%26t%255Bcrop%255D%255By%255D%3d276%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d318%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d1d2a3a908fdf14fe382f86a677c7d8bc58ffe2c78b3cd28d698c52e251bb84f4&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/sporten/fodbold/championsleague/interview-solbakken-jeg-har-naaet-maksimum-med-dette-hold" title="INTERVIEW Solbakken: Jeg har nået maksimum med dette hold"><span class="df-fs-42 df-blk"><span class="df-style-label-red">INTERVIEW</span> Solbakken: Jeg har nået maksimum med dette hold</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/sporten/fodbold/championsleague/interview-solbakken-jeg-har-naaet-maksimum-med-dette-hold">Ståle Solbakken om at sikre FCK efter sin afsked og sin fremtid.</a></span></p><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-be2c4657" class="df-article df-width-33 df-left df-row-7 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Kun hver fjerde pædagogstuderende føler sig fagligt udfordret" href="http://www.dr.dk/nyheder/indland/kun-hver-fjerde-paedagogstuderende-foeler-sig-fagligt-udfordret" id="ui-id-35" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/2913721.jpg?t%5Bcrop%5D%5Bwidth%5D=982&t%5Bcrop%5D%5Bheight%5D=419&t%5Bcrop%5D%5Bx%5D=521&t%5Bcrop%5D%5By%5D=252&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=128&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=1e4b0efbd469fc94a8362ca2152d8136c655cd61123b7001f24828ea0f22cd88" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f2913721.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d982%26t%255Bcrop%255D%255Bheight%255D%3d419%26t%255Bcrop%255D%255Bx%255D%3d521%26t%255Bcrop%255D%255By%255D%3d252%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d128%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d1e4b0efbd469fc94a8362ca2152d8136c655cd61123b7001f24828ea0f22cd88&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/kun-hver-fjerde-paedagogstuderende-foeler-sig-fagligt-udfordret" title="Kun hver fjerde pædagogstuderende føler sig fagligt udfordret">Kun hver fjerde pædagogstuderende føler sig fagligt udfordret</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-q739dc06" class="df-article df-width-33 df-left df-row-7 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="7980 Vils: Her bor kun 18 med udenlandsk baggrund" href="http://www.dr.dk/nyheder/regionale/midtvest/7980-vils-her-bor-kun-18-med-udenlandsk-baggrund" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236592.jpg?t%5Bcrop%5D%5Bwidth%5D=1733&t%5Bcrop%5D%5Bheight%5D=867&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=e028d8bebfd87d5c561274f00946f3e5ac3ce0e902a1b1c799c64c303eb94eda" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236592.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1733%26t%255Bcrop%255D%255Bheight%255D%3d867%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3de028d8bebfd87d5c561274f00946f3e5ac3ce0e902a1b1c799c64c303eb94eda&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/regionale/midtvest/7980-vils-her-bor-kun-18-med-udenlandsk-baggrund" title="7980 Vils: Her bor kun 18 med udenlandsk baggrund"><span class="df-fs-24 df-blk"><span class="df-style-label-red">7980 Vils:</span> Her bor kun 18 med udenlandsk baggrund</span></a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-e8dccaa2" class="df-article df-width-33 df-left df-row-8 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Sauerland om Patrick Nielsen-brøler: Det sker ikke igen" href="http://www.dr.dk/sporten/boksning/sauerland-om-patrick-nielsen-broeler-det-sker-ikke-igen" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237967.jpg?t%5Bcrop%5D%5Bwidth%5D=1980&t%5Bcrop%5D%5Bheight%5D=845&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=73&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=42181c2813f5038704133fb98dbc6d4416628d1abd84e99517e0f4dd1e75c34e" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237967.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1980%26t%255Bcrop%255D%255Bheight%255D%3d845%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d73%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d42181c2813f5038704133fb98dbc6d4416628d1abd84e99517e0f4dd1e75c34e&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/sporten/boksning/sauerland-om-patrick-nielsen-broeler-det-sker-ikke-igen" title="Sauerland om Patrick Nielsen-brøler: Det sker ikke igen">Sauerland om Patrick Nielsen-brøler: Det sker ikke igen</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-u2ba8005" class="df-article df-width-33 df-left df-row-8 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Unge får kursus i vasketøj, sund mad og nem-id" href="http://www.dr.dk/nyheder/regionale/bornholm/unge-faar-kursus-i-vasketoej-sund-mad-og-nem-id" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237968.jpg?t%5Bcrop%5D%5Bwidth%5D=954&t%5Bcrop%5D%5Bheight%5D=477&t%5Bcrop%5D%5Bx%5D=29&t%5Bcrop%5D%5By%5D=13&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=5316692ee9532be028bb00f7561abd5c4b73da9bd97a5f6d4fbcf1f00296b53f" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237968.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d954%26t%255Bcrop%255D%255Bheight%255D%3d477%26t%255Bcrop%255D%255Bx%255D%3d29%26t%255Bcrop%255D%255By%255D%3d13%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d5316692ee9532be028bb00f7561abd5c4b73da9bd97a5f6d4fbcf1f00296b53f&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Unge får kursus i vasketøj, sund mad og nem-id" href="http://www.dr.dk/nyheder/regionale/bornholm/unge-faar-kursus-i-vasketoej-sund-mad-og-nem-id">Unge får kursus i vasketøj, sund mad og nem-id</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-v8d02d3c" class="df-article df-width-33 df-left df-row-8 df-skin-07-historie-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="UGENS ALBUM: Himmelsk Bach fra klaverets nobleste gentleman " href="http://www.dr.dk/nyheder/kultur/klassisk/vi-anbefaler/ugens-album-bach-franske-suiter" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237531.jpg?t%5Bcrop%5D%5Bwidth%5D=232&t%5Bcrop%5D%5Bheight%5D=116&t%5Bcrop%5D%5Bx%5D=190&t%5Bcrop%5D%5By%5D=2&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=a02c26fc1d032b44b2adf4b03842f7d954119cadd66696e88fea87e604118579" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237531.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d232%26t%255Bcrop%255D%255Bheight%255D%3d116%26t%255Bcrop%255D%255Bx%255D%3d190%26t%255Bcrop%255D%255By%255D%3d2%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3da02c26fc1d032b44b2adf4b03842f7d954119cadd66696e88fea87e604118579&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/kultur/klassisk/vi-anbefaler/ugens-album-bach-franske-suiter" title="UGENS ALBUM: Himmelsk Bach fra klaverets nobleste gentleman "><span class="df-style-label-blue">UGENS ALBUM</span> Himmelsk Bach fra klaverets gentleman</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-0a6216d9" class="df-container df-autorow df-row-9 df-skin-default df-container-locked">
+	<div class="df-container-inner">
+		
+		<div id="marketing-banner-2" class="article-extract article-extract article-extract-full marketing-full-width">
+</div>
+<div class="df-article df-width-100 radioTVSpot radioSpot">
+
+	
+
+
+<section class="section-band">
+	<header class="heading-xxxlarge">
+				<a href="http://www.dr.dk/radio/player" class="section-link dr-icon-audio" rel="dr-netradio-launch">Netradio</a>
+				<h2><a href="http://www.dr.dk/radio/">Hør Radio</a></h2>
+	</header>
+	<div class="row">
+            <div class="col span-8 spotlists">
+                <div class="row">
+					    <div class="col span-4">
+					        
+
+
+
+
+
+<article class="dr-spot heading-xsmall-boxed no-links">
+        <p class="label">Perspektiv</p>
+    
+        <a href="/radio/ondemand/p1/hjernekassen-pa-p1-2016-11-21" rel="dr-netradio-launch" title="Hjernekassen p&#229; P1: Nobelprisen">
+            <span class="image-wrap ratio-16-9 dr-icon-audio-boxed-large">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/58315dc56187a406f442029a"><img alt="" src="http://www.dr.dk/mu/bar/58315dc56187a406f442029a"></img></noscript>
+            </span>
+            <div class="box">
+                <span class="dr-logo-p1d-small"></span>
+                    <p>Hjernekassen p&#229; P1: Nobelprisen</p>
+                    <h3>Hvad betyder Nobelprisen for forskningen?</h3>
+            </div>
+        </a>
+        <div class="box">
+            <a class="section-link dr-icon-audio" title="Hør program" rel="dr-netradio-launch" href="/radio/ondemand/p1/hjernekassen-pa-p1-2016-11-21">Hør program</a>     
+        </div>
+</article>
+					    </div>
+					    <div class="col span-4">
+					        
+
+
+
+
+
+<article class="dr-spot heading-xsmall-boxed no-links">
+        <p class="label">Musik</p>
+    
+        <a href="/radio/ondemand/p8jazz/jazz-co-med-fuzzy" rel="dr-netradio-launch" title="Jazz &amp; co">
+            <span class="image-wrap ratio-16-9 dr-icon-audio-boxed-large">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/583313eba11f9f17c4e36e62"><img alt="" src="http://www.dr.dk/mu/bar/583313eba11f9f17c4e36e62"></img></noscript>
+            </span>
+            <div class="box">
+                <span class="dr-logo-p8j-small"></span>
+                    <p>Jazz &amp; co</p>
+                    <h3>Fuzzy fort&#230;ller om sit forhold til jazz</h3>
+            </div>
+        </a>
+        <div class="box">
+            <a class="section-link dr-icon-audio" title="Hør program" rel="dr-netradio-launch" href="/radio/ondemand/p8jazz/jazz-co-med-fuzzy">Hør program</a>     
+        </div>
+</article>
+					    </div>
+				</div>
+                <div class="row">
+                    <div class="col span-8">
+
+
+
+
+
+
+<article class="dr-spot heading-xsmall-boxed no-links">
+        <p class="label">Sjov radio</p>
+    
+        <a href="/radio/ondemand/p1/platt-form-i-landstelefonen-21" rel="dr-netradio-launch" title="Platt-form: i-landstelefonen">
+            <span class="image-wrap ratio-16-9 dr-icon-audio-boxed-small">
+                <noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582c627c6187a41314509f2e"><img alt="" src="http://www.dr.dk/mu/bar/582c627c6187a41314509f2e"></img></noscript>
+            </span>
+            <div class="box">
+                <span class="dr-logo-p1d-small"></span>
+                    <p>Platt-form: i-landstelefonen</p>
+                    <h3>Hvad nu hvis Holger Emil ikke f&#229;r rollen som Jesus?</h3>
+            </div>
+        </a>
+        <div class="box">
+            <a class="section-link dr-icon-audio" title="Hør program" rel="dr-netradio-launch" href="/radio/ondemand/p1/platt-form-i-landstelefonen-21">Hør program</a>     
+        </div>
+</article>                    </div>
+                </div>
+			</div>
+            <div class="col span-4 specialSpot">
+                <h3>Jeg anbefaler</h3>
+				<div class="row">
+					<article class="celebSpot">
+						<span class="image-wrap ratio-16-9">
+							<noscript data-alt="" data-src="http://www.dr.dk/mu/bar/582c5d5e6187a41314509efd"><img alt="" src="http://www.dr.dk/mu/bar/582c5d5e6187a41314509efd"></img></noscript>
+						</span>
+						<p class="quote">P1 Podcaster: Den altid veloplagte og kompetente Susanna Sommer man&#248;vrerer her i et felt,  som jeg er enormt interesseret i, n&#229;r hun pr&#230;senterer danske og udenlandske podcasts og  tager os med ind i en flig af den fremtid, som radioen g&#229;r i m&#248;de. Der er masser af tanke, inspiration og underholdning. Og en af de podcasts som m&#229;ske kunne finde vej til P1Podcaster kunne v&#230;re DRs egen Operation Menneskejagt hvor de to gadedrengeantropologer, Rane Willerslev og Morten Nielsen, unders&#248;ger ti af livets st&#248;rste sp&#248;rgsm&#229;l. Begge programmer g&#229;r imod tidens live-mantra til fordel for dybden og formidlingen.</p>
+					</article>
+						<article class="dr-spot">
+							<a href="/radio/player/?psdb/p1-podcaster-51" rel="dr-netradio-launch" title="P1 podcaster - De originales taleradio, Vink og Podcatail">
+								<h3 data-maxlines="2" class="dr-icon-audio">P1 podcaster - De originales taleradio, Vink og Podcatail</h3>
+							</a>
+							<p class="metainfo">DR P1, 21. nov. 28 Min.</p>
+						</article>
+				</div>
+            </div>        
+    </div>
+</section>
+
+    
+</div>		
+	</div>
+</div><div id="df-9-v2797573" class="df-article df-width-66 df-right df-row-10 df-skin-07-historie-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="Forfatteren Jan Sonnergaard er død" href="http://www.dr.dk/nyheder/kultur/boeger/forfatteren-jan-sonnergaard-er-doed" id="ui-id-29" class="image-wrap ratio-620-287" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236666.jpg?t%5Bcrop%5D%5Bwidth%5D=3108&t%5Bcrop%5D%5Bheight%5D=1439&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=251&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=287&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=23bb0ef74fdbeed867f771bda2a45b8a035da560019f2066152ddf734ea80690" data-width="620" data-height="287" data-alt=""><img alt="" title="Photography: " width="620" height="287" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236666.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d3108%26t%255Bcrop%255D%255Bheight%255D%3d1439%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d251%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d287%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d23bb0ef74fdbeed867f771bda2a45b8a035da560019f2066152ddf734ea80690&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/kultur/boeger/forfatteren-jan-sonnergaard-er-doed" title="Forfatteren Jan Sonnergaard er død"><span class="df-fs-56 df-blk">Forfatteren Jan Sonnergaard er død</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/kultur/boeger/forfatteren-jan-sonnergaard-er-doed"> Jan Sonnergaard er død af et hjerteanfald under et ophold i Beograd. </a></span></p><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-a2178cf9" class="df-article df-width-33 df-left df-row-10 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="BILLEDER Børn fejrede FN's dag for børns rettigheder" href="http://www.dr.dk/ligetil/indland/billeder-boern-fejrede-fns-dag-boerns-rettigheder" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236423.jpg?t%5Bcrop%5D%5Bwidth%5D=517&t%5Bcrop%5D%5Bheight%5D=258&t%5Bcrop%5D%5Bx%5D=69&t%5Bcrop%5D%5By%5D=357&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=150&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=0d98e96c9f363605e5b1bf76077883837e6c5bc7c61f5fc52bca4afd0f2861b0" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236423.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d517%26t%255Bcrop%255D%255Bheight%255D%3d258%26t%255Bcrop%255D%255Bx%255D%3d69%26t%255Bcrop%255D%255By%255D%3d357%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d150%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d0d98e96c9f363605e5b1bf76077883837e6c5bc7c61f5fc52bca4afd0f2861b0&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/ligetil/indland/billeder-boern-fejrede-fns-dag-boerns-rettigheder" title="BILLEDER Børn fejrede FN's dag for børns rettigheder"><span class="df-style-label-red">BILLEDER</span> Børn fejrede FN's dag for børns rettigheder</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-h07e29c0" class="df-article df-width-33 df-left df-row-10 df-skin-07-historie-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="American Music Awards 2016: Seværdige takketaler og Trump-kritik" href="http://www.dr.dk/nyheder/kultur/musik/american-music-awards-2016-sevaerdige-takketaler-og-trump-kritik" class="image-wrap ratio-300-128" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237955.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=862&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=54&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=87098120bdf6386bbb52aac366fa15c050838fa61346a380830b8b40cfffb483" data-width="300" data-height="128" data-alt=""><img alt="" title="Photography: " width="300" height="128" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237955.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d862%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d54%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d87098120bdf6386bbb52aac366fa15c050838fa61346a380830b8b40cfffb483&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="American Music Awards 2016: Seværdige takketaler og Trump-kritik" href="http://www.dr.dk/nyheder/kultur/musik/american-music-awards-2016-sevaerdige-takketaler-og-trump-kritik"><span class="df-style-label-blue">American Music Awards 2016:</span> Seværdige takketaler og Trump-kritik</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-x707a2bb" class="df-article df-width-33 df-left df-row-11 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="U21-landsholdet slipper for Spanien og England ved EM" href="http://www.dr.dk/sporten/fodbold/u21-landsholdet-slipper-spanien-og-england-ved-em" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237607.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=869&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=121&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=47df2594920eff4db6d68f42651344ee6502637c62e0fe94801dc27572d48da9" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237607.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d869%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d121%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d47df2594920eff4db6d68f42651344ee6502637c62e0fe94801dc27572d48da9&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="U21-landsholdet slipper for Spanien og England ved EM" href="http://www.dr.dk/sporten/fodbold/u21-landsholdet-slipper-spanien-og-england-ved-em">U21-landsholdet slipper for Spanien og England ved EM</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-b005d2ce" class="df-article df-width-33 df-left df-row-11 df-skin-07-historie-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Gyldendal-direktør: Jan Sonnergaard var rå men også 'Søde Jan' " href="http://www.dr.dk/nyheder/kultur/boeger/gyldendal-direktoer-jan-sonnergaard-var-raa-men-ogsaa-soede-jan" class="image-wrap ratio-300-127" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237109.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=855&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=127&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=1e8e710880d40d45fbb72b193f44c3075b57b7dcdc0ac75429bc76f38826d276" data-width="300" data-height="127" data-alt=""><img alt="" title="Photography: " width="300" height="127" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237109.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d855%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d127%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d1e8e710880d40d45fbb72b193f44c3075b57b7dcdc0ac75429bc76f38826d276&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/kultur/boeger/gyldendal-direktoer-jan-sonnergaard-var-raa-men-ogsaa-soede-jan" title="Gyldendal-direktør: Jan Sonnergaard var rå men også 'Søde Jan' "><span class="df-fs-24 df-blk"><span class="df-style-label-blue">Gyldendal-direktør:</span> Jan Sonnergaard var rå, men også 'Søde Jan'</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-p2f33f99" class="df-article df-width-33 df-left df-row-11 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="BUPL: Vi er meget langt fra målet" href="http://www.dr.dk/nyheder/indland/bupl-vi-er-meget-langt-fra-maalet" id="ui-id-58" class="image-wrap ratio-300-150" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3237689.jpg?t%5Bcrop%5D%5Bwidth%5D=1284&t%5Bcrop%5D%5Bheight%5D=642&t%5Bcrop%5D%5Bx%5D=736&t%5Bcrop%5D%5By%5D=56&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=c3268cc680229288669fdf46b53827ebc65e4dd7d4c4d3d9ba464e99909ac311" data-width="300" data-height="150" data-alt=""><img alt="" title="Photography: " width="300" height="150" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3237689.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1284%26t%255Bcrop%255D%255Bheight%255D%3d642%26t%255Bcrop%255D%255Bx%255D%3d736%26t%255Bcrop%255D%255By%255D%3d56%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dc3268cc680229288669fdf46b53827ebc65e4dd7d4c4d3d9ba464e99909ac311&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/bupl-vi-er-meget-langt-fra-maalet" title="BUPL: Vi er meget langt fra målet"><span class="df-style-label-red">BUPL om ny uddannelse: </span>Vi er meget langt fra målet</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-m601f4ca" class="df-article df-width-66 df-left df-row-12 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="I Solrød bor flygtninge i parcelhuse på strandvejen" href="http://www.dr.dk/nyheder/indland/i-solroed-bor-flygtninge-i-parcelhuse-paa-strandvejen" class="image-wrap ratio-620-239" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236406.jpg?t%5Bcrop%5D%5Bwidth%5D=1920&t%5Bcrop%5D%5Bheight%5D=740&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=239&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=69d0606123defb4ebec998b540851239ae48291808d3eef9b1f06291787e982a" data-width="620" data-height="239" data-alt=""><img alt="" title="Photography: " width="620" height="239" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236406.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1920%26t%255Bcrop%255D%255Bheight%255D%3d740%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d239%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d69d0606123defb4ebec998b540851239ae48291808d3eef9b1f06291787e982a&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="I Solrød bor flygtninge i parcelhuse på strandvejen" href="http://www.dr.dk/nyheder/indland/i-solroed-bor-flygtninge-i-parcelhuse-paa-strandvejen"><span class="df-fs-44 df-blk">I Solrød bor flygtninge i parcelhuse på strandvejen</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/indland/i-solroed-bor-flygtninge-i-parcelhuse-paa-strandvejen">Somaliske Hussein Nur Mohamed har svært ved at få kontakt til sine naboer på Solrød Strandvej.</a></span></p><ul class="related"><li><a href="//www.dr.dk/nyheder/indland/i-mange-kommuner-indvandrere-skal-bo-med-etniske-danskere" data-original-id="urn:dr:drupal:article:76edfbc7-ae95-4dff-8d43-9f395c87ccef"><span class="label">Læs også</span>Mindst 38 kommuner spreder aktivt borgere med forskellig etnicitet</a></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-j6810a20" class="df-article df-width-33 df-left df-row-12 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Ekspert: Områder med indvandrere er bedre end villaveje til at få flygtninge i job" href="http://www.dr.dk/nyheder/indland/ekspert-omraader-med-indvandrere-er-bedre-end-villaveje-til-faa-flygtninge-i-job" id="ui-id-33" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236894.jpg?t%5Bcrop%5D%5Bwidth%5D=1710&t%5Bcrop%5D%5Bheight%5D=735&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=ab86d3ed8fa8d600020ba0296d3a057bf78c69875fe1703dab3f06ec3ff82a39" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236894.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1710%26t%255Bcrop%255D%255Bheight%255D%3d735%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dab86d3ed8fa8d600020ba0296d3a057bf78c69875fe1703dab3f06ec3ff82a39&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/ekspert-omraader-med-indvandrere-er-bedre-end-villaveje-til-faa-flygtninge-i-job" title="Ekspert: Områder med indvandrere er bedre end villaveje til at få flygtninge i job"><span class="df-style-label-red">Ekspert:</span> Indvandrer-kvarterer får flere i job end villaveje</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-h322e49d" class="df-article df-width-33 df-left df-row-12 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="For smalt bredbånd: Vi streamer alle spådomme ihjel" href="http://www.dr.dk/nyheder/penge/smalt-bredbaand-vi-streamer-alle-spaadomme-ihjel" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236287.jpg?t%5Bcrop%5D%5Bwidth%5D=1786&t%5Bcrop%5D%5Bheight%5D=768&t%5Bcrop%5D%5Bx%5D=54&t%5Bcrop%5D%5By%5D=244&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=a1c13d7551ddb5dd037cb64b6f0d669d97e20bf5360ac9d93597c4769133bfb0" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: Scanpix Denmark" width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236287.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1786%26t%255Bcrop%255D%255Bheight%255D%3d768%26t%255Bcrop%255D%255Bx%255D%3d54%26t%255Bcrop%255D%255By%255D%3d244%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3da1c13d7551ddb5dd037cb64b6f0d669d97e20bf5360ac9d93597c4769133bfb0&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/smalt-bredbaand-vi-streamer-alle-spaadomme-ihjel" title="For smalt bredbånd: Vi streamer alle spådomme ihjel"><span class="df-fs-24 df-blk"><span class="df-style-label-red">For smalt bredbånd:</span> Vi streamer alle spådomme ihjel</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-w61afec2" class="df-article df-width-33 df-left df-row-13 df-skin-07-historie-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a href="http://www.dr.dk/p3/programmer/p3/2016/11/21/talentfuldt-brite-far-hjaelp-af-hiphop-stjerne" class="image-wrap ratio-300-152" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236659.jpg?t%5Bcrop%5D%5Bwidth%5D=144&t%5Bcrop%5D%5Bheight%5D=73&t%5Bcrop%5D%5Bx%5D=122&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=153&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=213ca2e53a411ca4adad9f11e753b66f8bebc07405080e8faa3a3458394f59bc" data-width="300" data-height="152" data-alt=""><img alt="" title="Photography: " width="300" height="152" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236659.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d144%26t%255Bcrop%255D%255Bheight%255D%3d73%26t%255Bcrop%255D%255Bx%255D%3d122%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d153%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d213ca2e53a411ca4adad9f11e753b66f8bebc07405080e8faa3a3458394f59bc&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h3><a href="http://www.dr.dk/p3/programmer/p3/2016/11/21/talentfuldt-brite-far-hjaelp-af-hiphop-stjerne"><span class="df-fs-24 df-blk"><span class="df-style-label-blue">LYT</span> Talentfuld brite får hjælp af hiphop-stjerne</span></a></h3><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-s7d27a5a" class="df-article df-width-33 df-left df-row-13 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Fra det vilde vest til orden: De ulovlige e-cigaretter ned af hylderne" href="http://www.dr.dk/nyheder/indland/fra-det-vilde-vest-til-orden-de-ulovlige-e-cigaretter-ned-af-hylderne" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/2975933.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=869&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=34c7cbc6b6e2a794360a53c3bc0abb2657f758fa3e73f6796b60ad00125096be" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f2975933.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d869%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d34c7cbc6b6e2a794360a53c3bc0abb2657f758fa3e73f6796b60ad00125096be&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Fra det vilde vest til orden: De ulovlige e-cigaretter ned af hylderne" href="http://www.dr.dk/nyheder/indland/fra-det-vilde-vest-til-orden-de-ulovlige-e-cigaretter-ned-af-hylderne"><span class="df-style-label-red">Fra det vilde vest til orden:</span> De ulovlige e-cigaretter ned af hylderne</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-c4f964c3" class="df-article df-width-33 df-left df-row-13 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="SAS vil flytte del af flyflåde væk fra Skandinavien" href="http://www.dr.dk/nyheder/penge/sas-vil-flytte-del-af-flyflaade-vaek-fra-skandinavien" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/2793177.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=869&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=444&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=938a8c2c0c79a8cbe20d4b720fffeca5f165b8116d392b33ce549a67aa72c3ae" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f2793177.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d869%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d444%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d938a8c2c0c79a8cbe20d4b720fffeca5f165b8116d392b33ce549a67aa72c3ae&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/penge/sas-vil-flytte-del-af-flyflaade-vaek-fra-skandinavien" title="SAS vil flytte del af flyflåde væk fra Skandinavien">SAS overvejer at flytte del af flyflåde væk fra Skandinavien</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-gdadfe08" class="df-article df-width-66 df-right df-row-14 df-skin-01-nyheder-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="Mindst 38 kommuner spreder aktivt borgere med forskellig etnicitet" href="http://www.dr.dk/nyheder/indland/mindst-38-kommuner-spreder-aktivt-borgere-med-forskellig-etnicitet-0" id="ui-id-10" class="image-wrap ratio-620-319" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236143.jpg?t%5Bcrop%5D%5Bwidth%5D=1024&t%5Bcrop%5D%5Bheight%5D=527&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=319&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=a6102a77569dcc120c32070126107c2b8cf60f8e32fe119107d0d27d3818ab25" data-width="620" data-height="319" data-alt=""><img alt="" title="Photography: " width="620" height="319" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236143.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1024%26t%255Bcrop%255D%255Bheight%255D%3d527%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d319%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3da6102a77569dcc120c32070126107c2b8cf60f8e32fe119107d0d27d3818ab25&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/mindst-38-kommuner-spreder-aktivt-borgere-med-forskellig-etnicitet-0" title="Mindst 38 kommuner spreder aktivt borgere med forskellig etnicitet"><span class="df-fs-40 df-blk"><span class="df-style-label-red">I mange kommuner:</span> Indvandrere skal bo med etniske danskere</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/indland/mindst-38-kommuner-spreder-aktivt-borgere-med-forskellig-etnicitet-0">Bedre integration er et af målene når nye borgere får bolig.</a></span></p><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-i871028f" class="df-article df-width-33 df-left df-row-14 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-video" style="width: 300px;"><div class="df-img-container-inner"><a title="Pensioneret Obama vil undsige Trump hvis han udfordrer kerneværdier" href="http://www.dr.dk/nyheder/udland/valg-i-usa-2016/pensioneret-obama-vil-undsige-trump-hvis-han-udfordrer-kernevaerdier" id="ui-id-13" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236244.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=869&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=189&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=129&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=3ca92d4a22c46727d4b1dd10edf3da351ab8da6b0b211f911aecd65761de89a2" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236244.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d869%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d189%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d129%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d3ca92d4a22c46727d4b1dd10edf3da351ab8da6b0b211f911aecd65761de89a2&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/valg-i-usa-2016/pensioneret-obama-vil-undsige-trump-hvis-han-udfordrer-kernevaerdier" title="Pensioneret Obama vil undsige Trump hvis han udfordrer kerneværdier"><span class="df-fs-24 df-blk">Pensioneret Obama vil undsige Trump hvis han udfordrer kerneværdier</span></a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-i21f2c5b" class="df-article df-width-16 df-left df-row-14 df-skin-08-historie-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 140px;"><div class="df-img-container-inner"><a title="Bimse efter aftenens afsnit af 'Bedrag': Vi brugte spaghetti som stikvåben" href="http://www.dr.dk/nyheder/kultur/bimse-efter-aftenens-afsnit-af-bedrag-vi-brugte-spaghetti-som-stikvaaben" class="image-wrap ratio-140-112" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235829.jpg?t%5Bcrop%5D%5Bwidth%5D=1297&t%5Bcrop%5D%5Bheight%5D=1038&t%5Bcrop%5D%5Bx%5D=371&t%5Bcrop%5D%5By%5D=56&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=08c451f68b1368b3925821d97e91f626cac4eaf4b73dbc32054fc281f1c3dc58" data-width="140" data-height="112" data-alt=""><img alt="" title="Photography: " width="140" height="112" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235829.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1297%26t%255Bcrop%255D%255Bheight%255D%3d1038%26t%255Bcrop%255D%255Bx%255D%3d371%26t%255Bcrop%255D%255By%255D%3d56%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d08c451f68b1368b3925821d97e91f626cac4eaf4b73dbc32054fc281f1c3dc58&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/kultur/bimse-efter-aftenens-afsnit-af-bedrag-vi-brugte-spaghetti-som-stikvaaben" title="Bimse efter aftenens afsnit af 'Bedrag': Vi brugte spaghetti som stikvåben"><span class="df-style-label-blue">Bimse efter aftenens afsnit af 'Bedrag':</span> Vi brugte spaghetti som stikvåben</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-be636148" class="df-article df-width-16 df-left df-row-14 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 140px;"><div class="df-img-container-inner"><a title="SPORSDAGEN Danske Pernille Harder kan igen ende på scenen med Zlatan" href="http://www.dr.dk/sporten/oevrig/sporsdagen-danske-pernille-harder-kan-igen-ende-paa-scenen-med-zlatan" id="ui-id-11" class="image-wrap ratio-140-112" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236159.jpg?t%5Bcrop%5D%5Bwidth%5D=962&t%5Bcrop%5D%5Bheight%5D=770&t%5Bcrop%5D%5Bx%5D=467&t%5Bcrop%5D%5By%5D=89&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=a94e3d0b948a6fb162dfaf0661c7de3103286ec2729f4a1c7a0e63f6696a21a9" data-width="140" data-height="112" data-alt=""><img alt="" title="Photography: " width="140" height="112" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236159.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d962%26t%255Bcrop%255D%255Bheight%255D%3d770%26t%255Bcrop%255D%255Bx%255D%3d467%26t%255Bcrop%255D%255By%255D%3d89%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3da94e3d0b948a6fb162dfaf0661c7de3103286ec2729f4a1c7a0e63f6696a21a9&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="SPORSDAGEN Danske Pernille Harder kan igen ende på scenen med Zlatan" href="http://www.dr.dk/sporten/oevrig/sporsdagen-danske-pernille-harder-kan-igen-ende-paa-scenen-med-zlatan"><span class="df-style-label-red">SPORTSDAGEN</span> Danske Pernille Harder kan igen ende på scenen med Zlatan</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-y201ddb9" class="df-article df-width-16 df-left df-row-15 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-video" style="width: 140px;"><div class="df-img-container-inner"><a title="Trump vil normalisere forholdet til Rusland" href="http://www.dr.dk/nyheder/indland/trump-vil-normalisere-forholdet-til-rusland" class="image-wrap ratio-140-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236132.jpg?t%5Bcrop%5D%5Bwidth%5D=1218&t%5Bcrop%5D%5Bheight%5D=1123&t%5Bcrop%5D%5Bx%5D=801&t%5Bcrop%5D%5By%5D=209&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=5a50bfbba7ac146d34b283900616cf39b1aee6635716941c916c6b2e33e20620" data-width="140" data-height="129" data-alt=""><img alt="" title="Photography: " width="140" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236132.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1218%26t%255Bcrop%255D%255Bheight%255D%3d1123%26t%255Bcrop%255D%255Bx%255D%3d801%26t%255Bcrop%255D%255By%255D%3d209%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d5a50bfbba7ac146d34b283900616cf39b1aee6635716941c916c6b2e33e20620&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/trump-vil-normalisere-forholdet-til-rusland" title="Trump vil normalisere forholdet til Rusland">Trump vil normalisere forholdet til Rusland</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-se6a83c7" class="df-article df-width-16 df-left df-row-15 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 140px;"><div class="df-img-container-inner"><a title="Mandagen byder på 10 grader og mindre vind" href="http://www.dr.dk/nyheder/vejret/mandagen-byder-paa-10-grader-og-mindre-vind" class="image-wrap ratio-140-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3234771.jpg?t%5Bcrop%5D%5Bwidth%5D=764&t%5Bcrop%5D%5Bheight%5D=704&t%5Bcrop%5D%5Bx%5D=628&t%5Bcrop%5D%5By%5D=442&t%5Bresize%5D%5Bwidth%5D=140&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=3dca47cce480a3ff3001dce2265393b78f8e5a38a01b2ea550d916049bc11131" data-width="140" data-height="129" data-alt=""><img alt="" title="Photography: " width="140" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3234771.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d764%26t%255Bcrop%255D%255Bheight%255D%3d704%26t%255Bcrop%255D%255Bx%255D%3d628%26t%255Bcrop%255D%255By%255D%3d442%26t%255Bresize%255D%255Bwidth%255D%3d140%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d3dca47cce480a3ff3001dce2265393b78f8e5a38a01b2ea550d916049bc11131&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/vejret/mandagen-byder-paa-10-grader-og-mindre-vind" title="Mandagen byder på 10 grader og mindre vind">Mandagen byder på 10 grader og mindre vind</a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-q24f1959" class="df-article df-width-33 df-left df-row-15 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-video" style="width: 300px;"><div class="df-img-container-inner"><a title="VIDEO Gigtsygdom smadrede Stig Pryds' liv: I dag er han blandt verdens bedste fridykkere" href="http://www.dr.dk/nyheder/indland/video-gigtsygdom-smadrede-stig-pryds-liv-i-dag-er-han-blandt-verdens-bedste" class="image-wrap ratio-300-105" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235867.jpg?t%5Bcrop%5D%5Bwidth%5D=1920&t%5Bcrop%5D%5Bheight%5D=672&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=83&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=12a9808ebd2b9876d36fd1ab27ae058e3179a60eb3152347dd583754b1838649" data-width="300" data-height="105" data-alt=""><img alt="" title="Photography: " width="300" height="105" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235867.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1920%26t%255Bcrop%255D%255Bheight%255D%3d672%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d83%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d12a9808ebd2b9876d36fd1ab27ae058e3179a60eb3152347dd583754b1838649&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/video-gigtsygdom-smadrede-stig-pryds-liv-i-dag-er-han-blandt-verdens-bedste" title="VIDEO Gigtsygdom smadrede Stig Pryds' liv: I dag er han blandt verdens bedste fridykkere"><span class="df-style-label-red">VIDEO</span> Gigtsygdom smadrede Stig Pryds' liv: I dag er han blandt verdens bedste fridykkere</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-jc9b6ecd" class="df-article df-width-33 df-left df-row-15 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Seruminstitut advarer: Dobbelt så mange smittet med resistente bakterier" href="http://www.dr.dk/nyheder/indland/seruminstitut-advarer-dobbelt-saa-mange-smittet-med-resistente-bakterier" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/2530815.jpg?t%5Bcrop%5D%5Bwidth%5D=1359&t%5Bcrop%5D%5Bheight%5D=584&t%5Bcrop%5D%5Bx%5D=331&t%5Bcrop%5D%5By%5D=177&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=129&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=23b957c547f59a2470b1c36f9df3b48cbb741ae043fe1b4b17cbe2dcbb8f0041" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f2530815.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1359%26t%255Bcrop%255D%255Bheight%255D%3d584%26t%255Bcrop%255D%255Bx%255D%3d331%26t%255Bcrop%255D%255By%255D%3d177%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d129%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d23b957c547f59a2470b1c36f9df3b48cbb741ae043fe1b4b17cbe2dcbb8f0041&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/seruminstitut-advarer-dobbelt-saa-mange-smittet-med-resistente-bakterier" title="Seruminstitut advarer: Dobbelt så mange smittet med resistente bakterier"><span class="df-style-label-red">Seruminstitut: <br /></span>Dobbelt så mange smittet med resistente bakterier</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-mcde6e76" class="df-article df-width-66 df-left df-row-16 df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="DR's korrespondent: Her er Merkels tre største udfordringer" href="http://www.dr.dk/nyheder/udland/drs-korrespondent-her-er-merkels-tre-stoerste-udfordringer" class="image-wrap ratio-620-270" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235779.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=880&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=456&t%5Bresize%5D%5Bwidth%5D=620&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=46e99ea7b3e8af25ab2018424d6f18a92c095a20e4701db60e9c10fd516f05d0" data-width="620" data-height="270" data-alt=""><img alt="" title="Photography: " width="620" height="270" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235779.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d880%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d456%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d46e99ea7b3e8af25ab2018424d6f18a92c095a20e4701db60e9c10fd516f05d0&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/drs-korrespondent-her-er-merkels-tre-stoerste-udfordringer" title="DR's korrespondent: Her er Merkels tre største udfordringer"><span class="df-fs-44 df-blk"><span class="df-style-label-red">Korrespondent:</span> Her er Merkels tre største udfordringer i en forandret verden</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/udland/drs-korrespondent-her-er-merkels-tre-stoerste-udfordringer">Angela Merkel genopstiller som kansler, men hendes magt er udfordret.</a></span></p><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-s8b8bc89" class="df-article df-width-33 df-left df-row-16 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Frankrig: Garvet politiker opgiver ikke præsidentdrømmen " href="http://www.dr.dk/nyheder/udland/frankrig-garvet-politiker-opgiver-ikke-praesidentdroemmen" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236133.jpg?t%5Bcrop%5D%5Bwidth%5D=1284&t%5Bcrop%5D%5Bheight%5D=552&t%5Bcrop%5D%5Bx%5D=732&t%5Bcrop%5D%5By%5D=244&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=c7af263055f190b2bbd52a5009ace3cc7b6b580a1bdddb0dd873a6a0bebd5e6a" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236133.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1284%26t%255Bcrop%255D%255Bheight%255D%3d552%26t%255Bcrop%255D%255Bx%255D%3d732%26t%255Bcrop%255D%255By%255D%3d244%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3dc7af263055f190b2bbd52a5009ace3cc7b6b580a1bdddb0dd873a6a0bebd5e6a&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Frankrig: Garvet politiker opgiver ikke præsidentdrømmen " href="http://www.dr.dk/nyheder/udland/frankrig-garvet-politiker-opgiver-ikke-praesidentdroemmen"><span class="df-style-label-red">Frankrig:</span> Garvet politiker opgiver ikke præsidentdrømmen</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-c12366c8" class="df-article df-width-33 df-left df-row-16 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Overtidsscoring sikrer Inter point i Milano-derby" href="http://www.dr.dk/sporten/fodbold/italien/overtidsscoring-sikrer-inter-point-i-milano-derby" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236160.jpg?t%5Bcrop%5D%5Bwidth%5D=3498&t%5Bcrop%5D%5Bheight%5D=1504&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=1075d565674262d756219f0cb08eb03d9434b28b308170994661055add1b95bc" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236160.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d3498%26t%255Bcrop%255D%255Bheight%255D%3d1504%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d1075d565674262d756219f0cb08eb03d9434b28b308170994661055add1b95bc&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/sporten/fodbold/italien/overtidsscoring-sikrer-inter-point-i-milano-derby" title="Overtidsscoring sikrer Inter point i Milano-derby">Overtidsscoring sikrer Inter point i lokalopgør i Milano</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-n8dd11e5" class="df-article df-width-33 df-left df-row-17 df-skin-white df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Sarkozy bliver ikke præsident igen - ryger ud af primærvalg" href="http://www.dr.dk/nyheder/udland/sarkozy-bliver-ikke-praesident-igen-ryger-ud-af-primaervalg" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235983.jpg?t%5Bcrop%5D%5Bwidth%5D=1640&t%5Bcrop%5D%5Bheight%5D=705&t%5Bcrop%5D%5Bx%5D=880&t%5Bcrop%5D%5By%5D=339&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=6bf0ab55ef6d750cedb5e066b5e16068ce8050391328ecba8af3e7cb526fe15b" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: Scanpix Denmark" width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235983.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d1640%26t%255Bcrop%255D%255Bheight%255D%3d705%26t%255Bcrop%255D%255Bx%255D%3d880%26t%255Bcrop%255D%255By%255D%3d339%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d6bf0ab55ef6d750cedb5e066b5e16068ce8050391328ecba8af3e7cb526fe15b&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Sarkozy bliver ikke præsident igen - ryger ud af primærvalg" href="http://www.dr.dk/nyheder/udland/sarkozy-bliver-ikke-praesident-igen-ryger-ud-af-primaervalg">Sarkozy bliver ikke præsident igen - ryger ud af primærvalg</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-m159195f" class="df-article df-width-33 df-left df-row-17 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Mistænkt anklager taber navnesag i byretten " href="http://www.dr.dk/nyheder/indland/mistaenkt-anklager-taber-navnesag-i-byretten" class="image-wrap ratio-300-153" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3088702.jpg?t%5Bcrop%5D%5Bwidth%5D=974&t%5Bcrop%5D%5Bheight%5D=497&t%5Bcrop%5D%5Bx%5D=513&t%5Bcrop%5D%5By%5D=97&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=52e3e8f9e7420c3d3f048fa4f1091481e85d7d19f5a1974664150fdd841c8dee" data-width="300" data-height="153" data-alt=""><img alt="" title="Photography: " width="300" height="153" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3088702.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d974%26t%255Bcrop%255D%255Bheight%255D%3d497%26t%255Bcrop%255D%255Bx%255D%3d513%26t%255Bcrop%255D%255By%255D%3d97%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d52e3e8f9e7420c3d3f048fa4f1091481e85d7d19f5a1974664150fdd841c8dee&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/mistaenkt-anklager-taber-navnesag-i-byretten" title="Mistænkt anklager taber navnesag i byretten "><span class="df-fs-24 df-blk">Anklager taber navnesag i byretten</span></a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-r78ca8f9" class="df-article df-width-33 df-left df-row-17 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Trump bryder tradition: Førstedame flytter ikke ind i Det Hvide Hus" href="http://www.dr.dk/nyheder/udland/valg-i-usa-2016/trump-bryder-tradition-foerstedame-flytter-ikke-ind-i-det-hvide-hus" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236131.jpg?t%5Bcrop%5D%5Bwidth%5D=2123&t%5Bcrop%5D%5Bheight%5D=913&t%5Bcrop%5D%5Bx%5D=538&t%5Bcrop%5D%5By%5D=241&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=e57cb5fd60bd41b58992bf7919f4f69f53ff1a18e6b4637106e3b1f1d339c5ce" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: Scanpix Denmark" width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236131.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2123%26t%255Bcrop%255D%255Bheight%255D%3d913%26t%255Bcrop%255D%255Bx%255D%3d538%26t%255Bcrop%255D%255By%255D%3d241%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3de57cb5fd60bd41b58992bf7919f4f69f53ff1a18e6b4637106e3b1f1d339c5ce&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/valg-i-usa-2016/trump-bryder-tradition-foerstedame-flytter-ikke-ind-i-det-hvide-hus" title="Trump bryder tradition: Førstedame flytter ikke ind i Det Hvide Hus"><span class="df-style-label-red">Trump bryder tradition:</span> Førstedame flytter ikke ind i Det Hvide Hus</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-pebe1871" class="df-article df-width-66 df-right df-row-18 df-skin-01-nyheder-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container df-skin-icon-video" style="width: 620px;"><div class="df-img-container-inner"><a title="2660: Danmarks første postnummer med etniske danskere i undertal" href="http://www.dr.dk/nyheder/indland/2660-danmarks-foerste-postnummer-med-etniske-danskere-i-undertal-0" id="ui-id-14" class="image-wrap ratio-620-349" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235652.jpg?t%5Bresize%5D%5Bwidth%5D=1440&#38;t%5Bresize%5D%5Bflag%5D=&#62;&#38;t%5Bquality%5D=85&#38;t%5Bsharpen%5D%5Bmode%5D=variable&#38;t%5Bstrip%5D=true&#38;accessToken=547bb64f1cd9fbec56a60b781cfe3be29ec97c7993d8afe754d0e3db651e1215" data-width="620" data-height="349" data-alt=""><img alt="" title="Photography: " width="620" height="349" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235652.jpg%3ft%255Bresize%255D%255Bwidth%255D%3d1440%26&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/2660-danmarks-foerste-postnummer-med-etniske-danskere-i-undertal-0" title="2660: Danmarks første postnummer med etniske danskere i undertal"><span class="df-fs-36 df-blk"><span class="df-style-label-red">2660:</span> Danmarks første postnummer med etniske danskere i undertal</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/indland/2660-danmarks-foerste-postnummer-med-etniske-danskere-i-undertal-0">I Brøndby Strand bor 80 forskellige nationaliteter dør om dør. </a></span></p><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-g3c51bb0" class="df-article df-width-33 df-left df-row-18 df-skin-01-nyheder-default">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="INTEGRATION Så ens og forskellige er etniske grupper i Danmark" href="http://www.dr.dk/nyheder/indland/integration-saa-ens-og-forskellige-er-etniske-grupper-i-danmark" id="ui-id-42" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235202.jpg?t%5Bcrop%5D%5Bwidth%5D=620&t%5Bcrop%5D%5Bheight%5D=267&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=39&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=129&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=5ffc4638e57fb076b9af0e548a06c7b858e39f016ea4bb52caa267dd4d9d5a23" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235202.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d620%26t%255Bcrop%255D%255Bheight%255D%3d267%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d39%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d129%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d5ffc4638e57fb076b9af0e548a06c7b858e39f016ea4bb52caa267dd4d9d5a23&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/integration-saa-ens-og-forskellige-er-etniske-grupper-i-danmark" title="INTEGRATION Så ens og forskellige er etniske grupper i Danmark"><span class="df-fs-24"><span class="df-style-label-red">INTEGRATION</span> <br />Så ens og forskellige er etniske grupper i Danmark</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-mcbc5ea5" class="df-article df-width-33 df-left df-row-18 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Fra 'gæstearbejdere' i 1960'erne og frem til 2050: Sådan vil Danmark ændre sig" href="http://www.dr.dk/nyheder/indland/fra-gaestearbejdere-i-1960erne-og-frem-til-2050-saadan-vil-danmark-aendre-sig" id="ui-id-41" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235024.jpg?t%5Bcrop%5D%5Bwidth%5D=620&t%5Bcrop%5D%5Bheight%5D=267&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=43&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=129&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=f1ff012ec6a8bb8aed2651db87d03be6d24c916e491b3353774f5eccb0d06945" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235024.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d620%26t%255Bcrop%255D%255Bheight%255D%3d267%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d43%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d129%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3df1ff012ec6a8bb8aed2651db87d03be6d24c916e491b3353774f5eccb0d06945&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/indland/fra-gaestearbejdere-i-1960erne-og-frem-til-2050-saadan-vil-danmark-aendre-sig" title="Fra 'gæstearbejdere' i 1960'erne og frem til 2050: Sådan vil Danmark ændre sig"><span class="df-fs-24"><span class="df-style-label-red">Sådan vil Danmark ændre sig etnisk:</span> Fra  1960'erne og til 2050 </span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-wb1b5fa0" class="df-article df-width-66 df-left df-row-19 df-skin-01-nyheder-default df-clearer">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 620px;"><div class="df-img-container-inner"><a title="Midt i jobsamtaler: Trump brokker sig over musical og sketchshow" href="http://www.dr.dk/nyheder/udland/midt-i-jobsamtaler-trump-brokker-sig-over-musical-og-sketchshow" id="ui-id-28" class="image-wrap ratio-620-267" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235501.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=870&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=104&t%5Bresize%5D%5Bwidth%5D=620&t%5Bresize%5D%5Bheight%5D=267&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=6542605eda6aee211668b805458cfe57cb1e2052239f58b60f38a9526d6d6a20" data-width="620" data-height="267" data-alt=""><img alt="" title="Photography: " width="620" height="267" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235501.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d870%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d104%26t%255Bresize%255D%255Bwidth%255D%3d620%26t%255Bresize%255D%255Bheight%255D%3d267%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d6542605eda6aee211668b805458cfe57cb1e2052239f58b60f38a9526d6d6a20&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/udland/midt-i-jobsamtaler-trump-brokker-sig-over-musical-og-sketchshow" title="Midt i jobsamtaler: Trump brokker sig over musical og sketchshow"><span class="df-fs-32 df-blk"><span class="df-style-label-red">Midt i jobsamtaler:</span> Trump brokker sig over musical og sketchshow</span></a></h1><p><span class="df-style-teaser"><a href="http://www.dr.dk/nyheder/udland/midt-i-jobsamtaler-trump-brokker-sig-over-musical-og-sketchshow">Vicepræsidents teaterbesøg fylder meget i de amerikanske medier midt i regeringsforhandlingerne.</a></span></p><ul class="related"><li><a href="//www.dr.dk/nyheder/udland/trump-kraever-undskyldning-efter-musical-opsang-til-vicepraesident" data-original-id="urn:dr:drupal:article:e190d6e6-aeec-414e-af4a-b9bb2cfb4408"><span class="label">Læs også:</span> Trump kræver undskyldning efter musical-opsang til vicepræsident</a></li></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-a8cbebfd" class="df-article df-width-33 df-left df-row-19 df-skin-02-nyheder-small">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Svendborg åbner Danmarks første landsby for demente" href="http://www.dr.dk/nyheder/regionale/fyn/svendborg-aabner-danmarks-foerste-landsby-demente" id="ui-id-12" class="image-wrap ratio-300-129" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3236175.jpg?t%5Bcrop%5D%5Bwidth%5D=2020&t%5Bcrop%5D%5Bheight%5D=869&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=9b0d31da21b8a6fed995061c3853f836e5aaceeef764f70c00d07bcc7bb9ca76" data-width="300" data-height="129" data-alt=""><img alt="" title="Photography: " width="300" height="129" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3236175.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d2020%26t%255Bcrop%255D%255Bheight%255D%3d869%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d9b0d31da21b8a6fed995061c3853f836e5aaceeef764f70c00d07bcc7bb9ca76&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a href="http://www.dr.dk/nyheder/regionale/fyn/svendborg-aabner-danmarks-foerste-landsby-demente" title="Svendborg åbner Danmarks første landsby for demente"><span class="df-fs-24 df-blk">Svendborg åbner Danmarks første landsby for demente</span></a></h1><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-i96b6774" class="df-article df-width-33 df-left df-row-19 df-skin-white">
+	
+	<div class="df-article-content">
+		<div class="df-img-container" style="width: 300px;"><div class="df-img-container-inner"><a title="Årets detalje i Superligaen? FCM-målmand griber eget målspark" href="http://www.dr.dk/sporten/fodbold/superliga/aarets-detalje-i-superligaen-fcm-maalmand-griber-eget-maalspark" class="image-wrap ratio-300-127" role="presentation" aria-hidden="true"><noscript data-src="http://smooth-storage.cdn.aptoma.no/users/drf-dr/images/3235942.jpg?t%5Bcrop%5D%5Bwidth%5D=924&t%5Bcrop%5D%5Bheight%5D=391&t%5Bcrop%5D%5Bx%5D=0&t%5Bcrop%5D%5By%5D=0&t%5Bresize%5D%5Bwidth%5D=300&t%5Bresize%5D%5Bheight%5D=127&t%5Bquality%5D=85&t%5Bsharpen%5D%5Bmode%5D=variable&t%5Bstrip%5D=true&accessToken=461c452dfbfa09b4777f3df4c9f20c8170648b5bc85e8fdf5781190e5a1764aa" data-width="300" data-height="127" data-alt=""><img alt="" title="Photography: Casper Helweg Christiansen DR Sporten" width="300" height="127" src="//asset.dr.dk/imagescaler/?file=%2fusers%2fdrf-dr%2fimages%2f3235942.jpg%3ft%255Bcrop%255D%255Bwidth%255D%3d924%26t%255Bcrop%255D%255Bheight%255D%3d391%26t%255Bcrop%255D%255Bx%255D%3d0%26t%255Bcrop%255D%255By%255D%3d0%26t%255Bresize%255D%255Bwidth%255D%3d300%26t%255Bresize%255D%255Bheight%255D%3d127%26t%255Bquality%255D%3d85%26t%255Bsharpen%255D%255Bmode%255D%3dvariable%26t%255Bstrip%255D%3dtrue%26accessToken%3d461c452dfbfa09b4777f3df4c9f20c8170648b5bc85e8fdf5781190e5a1764aa&amp;server=smooth-storage.cdn.aptoma.no"></noscript><span class="df-img-layer"> </span></a></div></div><h1><a title="Årets detalje i Superligaen? FCM-målmand griber eget målspark" href="http://www.dr.dk/sporten/fodbold/superliga/aarets-detalje-i-superligaen-fcm-maalmand-griber-eget-maalspark">Årets Superliga-detalje? i FCM-målmand griber eget målspark</a></h1><ul class="related"></ul><div class="df-clearer"></div>
+	</div>
+	
+</div>
+<div id="df-9-9406837a" class="df-container df-autorow df-row-20 df-skin-default df-container-locked">
+	<div class="df-container-inner">
+		
+		
+	<div id="marketing-banner-3" class="article-extract article-extract article-extract-full marketing-full-width">
+	</div>
+
+	<a href="/tv/oversigt" id="frontpage-tvguide-link">
+		<section id="frontpage-tvguide" class="section-band">
+			<header class="heading-xxxlarge">
+				<h2>Tv<span> i aften</span></h2>
+			</header>
+    
+			<table>
+				<thead>
+					<tr>
+						<th scope="col"><span class="dr-logo-dr1-small">DR1</span></th>
+						<th scope="col"><span class="dr-logo-dr2-small">DR2</span></th>
+						<th scope="col"><span class="dr-logo-dr3-small">DR3</span></th>
+						<th scope="col"><span class="dr-logo-tvk-small">DR K</span></th>
+						<th scope="col"><span class="ritzau-logo-td2">TV 2</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="from-time">
+						<td>18:00</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr class="programs">
+						<td>
+							<ul>
+								<li><time>17:50</time>TV AVISEN</li>
+								<li><time>18:00</time>Antikduellen (9:12)</li>
+								<li><time>18:30</time>TV AVISEN med Sporten</li>
+								<li><time>18:55</time>Vores vejr</li>
+								<li><time>19:05</time>Aftenshowet</li>
+								<li><time>19:55</time>TV AVISEN</li>
+								<li><time>20:00</time>Mig og Klassen (5:6) - Christian Stadil</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li><time>17:00</time>DR2 Dagen</li>
+								<li><time>18:30</time>Opr&#248;r fra Ghettoen (1:3)</li>
+								<li><time>19:15</time>Alternativ behandling - I hopla p&#229; helsemessen</li>
+								<li><time>20:00</time>Smag p&#229; K&#248;benhavn</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li><time>17:15</time>Ung i USA - Piger bag tremmer</li>
+								<li><time>18:10</time>Billet til K&#230;rlighed (2:6)</li>
+								<li><time>18:40</time>The Tonight Show med Jimmy Fallon</li>
+								<li><time>19:25</time>Family Guy</li>
+								<li><time>19:45</time>Family Guy</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li><time>17:30</time>Da kvinderne br&#248;d lydmuren</li>
+								<li><time>18:20</time>Historien om jumbojetten - Boeing 747</li>
+								<li><time>19:55</time>Dagens Sang</li>
+								<li><time>20:00</time>Piloten der forsvandt</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li><time>17:55</time>Dit efter&#229;rsvejr</li>
+								<li><time>18:00</time>Nyhederne</li>
+								<li><time>18:20</time>Regionale nyheder</li>
+								<li><time>18:25</time>Go&#39; aften Danmark</li>
+								<li><time>19:00</time>Nyhederne</li>
+								<li><time>19:30</time>Regionalprogram</li>
+								<li><time>20:00</time>Danskere p&#229; tvang</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr><td colspan="5">Se alle 76 kanaler, og lav din egen kanalvisning på tv-oversigten <span class="section-link dr-icon-guide">Se tv-oversigten</span></td></tr>
+				</tfoot>
+			</table>
+		</section>
+	</a>
+		
+	</div>
+</div>	</div>
+	<br class="df-clearer" />
+</div>
+                
+                
+
+
+<div class="row more-band">
+	<div class="col span-8">
+		<section class="dr-list-image-3">
+	        <h2><a href="//www.dr.dk/etik-og-rettelser/brugernes-redaktoer">Lytternes, seernes og brugernes redaktør</a></h2>
+	        <article class="heading-medium">
+		        <a href="http://www.dr.dk/etik-og-rettelser/brugernes-redaktoer/klummen/dr-har-ikke-bare-ret-men-pligt-til-kritiske-interviews" class="image-wrap">
+			        <img src="/assets/img/ratio-16-9.gif" data-src="/Forside/drdk/DR.Frontpage/Content/img/Termansen_mere.jpg" width="220" height="124" alt="Lytternes, seernes og brugernes redaktør" />
+			        <noscript>
+				        <img src="/Forside/drdk/DR.Frontpage/Content/img/Termansen_mere.jpg" width="220" height="124" alt="Lytternes, seernes og brugernes redaktør" />
+			        </noscript>
+		        </a>
+				        <h3><a href="http://www.dr.dk/etik-og-rettelser/brugernes-redaktoer/klummen/dr-har-ikke-bare-ret-men-pligt-til-kritiske-interviews">DR har ikke bare ret, men pligt til kritiske interviews</a></h3>
+				        <time class="metainfo">28. okt. 2016</time>
+				        <p><a href="http://www.dr.dk/etik-og-rettelser/brugernes-redaktoer/klummen/dr-har-ikke-bare-ret-men-pligt-til-kritiske-interviews">DR har ikke bare ret, men ogs&#229; pligt til at g&#229; kritisk til politikere og andre magthavere. Is&#230;r i en tid, hvor Facebooks dominans truer traditionelle mediers indflydelse. Emnet har f&#229;et plads i den seneste halv&#229;rsberetning til DR&#180;s bestyrelse.</a></p>
+	        </article>
+	        <aside><a class="section-link" href="//www.dr.dk/etik-og-rettelser/brugernes-redaktoer">Læs mere</a></aside>
+        </section>
+	</div>
+	<div class="col span-4">
+		<section class="dr-list-image-1">
+            <h2><a href="http://www.dr.dk/Om_DR/">Nyt fra DR</a></h2>
+						<article class="heading-xsmall">
+							<a href="http://www.dr.dk/om-dr/nyheder/se-krimi-i-verdensklasse-paa-dr-k" class="image-wrap">
+										<img src="/assets/img/ratio-16-9.gif" data-src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/article/2016/11/21/13_forbrydelsen_sofie_grnbcl_mikael_birkkjar_foto_af_tine_harden.jpg&amp;scaleAfter=crop" width="70" height="40" alt="I weekenden fredag den 25. november til s&#248;ndag den 27. november viser DR K gensyn med en perler&#230;kke af DRs krimier, blandt andet afsnit af ’Rejseholdet’, ’&#216;rnen III’, ’Livvagterne’ og ’Forbrydelsen II’." />
+										<noscript>
+											<img src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/article/2016/11/21/13_forbrydelsen_sofie_grnbcl_mikael_birkkjar_foto_af_tine_harden.jpg&amp;scaleAfter=crop" width="70" height="40" alt="I weekenden fredag den 25. november til s&#248;ndag den 27. november viser DR K gensyn med en perler&#230;kke af DRs krimier, blandt andet afsnit af ’Rejseholdet’, ’&#216;rnen III’, ’Livvagterne’ og ’Forbrydelsen II’." />
+										</noscript>
+							</a>
+							<h3><a href="http://www.dr.dk/om-dr/nyheder/se-krimi-i-verdensklasse-paa-dr-k">Se krimi i verdensklasse p&#229; DR K</a></h3>
+							<p class="metainfo">21. nov. 2016</p>
+						</article>
+						<article class="heading-xsmall">
+							<a href="http://www.dr.dk/om-dr/nyheder/ugens-tv-top-10-frederik-og-mary-fik-over-600000-seere" class="image-wrap">
+										<img src="/assets/img/ratio-16-9.gif" data-src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/article/2015/10/03/maryfrede3.jpg&amp;scaleAfter=crop" width="70" height="40" alt="Vel over en halv million danskere s&#229; med, da DR 1 onsdag kiggede tilbage p&#229; 12 &#189; &#229;r med kronprinseparret." />
+										<noscript>
+											<img src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/article/2015/10/03/maryfrede3.jpg&amp;scaleAfter=crop" width="70" height="40" alt="Vel over en halv million danskere s&#229; med, da DR 1 onsdag kiggede tilbage p&#229; 12 &#189; &#229;r med kronprinseparret." />
+										</noscript>
+							</a>
+							<h3><a href="http://www.dr.dk/om-dr/nyheder/ugens-tv-top-10-frederik-og-mary-fik-over-600000-seere">Ugens TV-top 10: Frederik og Mary fik over 600.000 seere</a></h3>
+							<p class="metainfo">21. nov. 2016</p>
+						</article>
+						<article class="heading-xsmall">
+							<a href="http://www.dr.dk/om-dr/nyheder/danmark-synger-julen-ind-igen" class="image-wrap">
+										<img src="/assets/img/ratio-16-9.gif" data-src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/crop/2016/11/14/1479128449_123656170.jpg&amp;scaleAfter=crop" width="70" height="40" alt="Igen i &#229;r g&#229;r DR julem&#229;neden i m&#248;de med f&#230;llessang og julestemning i DR Koncerthuset, n&#229;r ’Danmark synger julen ind’ med v&#230;rt og dirigent Phillip Faber." />
+										<noscript>
+											<img src="http://www.dr.dk/cmsimages/dynimage.drxml?w=70&amp;h=40&amp;file=http://www.dr.dk/images/crop/2016/11/14/1479128449_123656170.jpg&amp;scaleAfter=crop" width="70" height="40" alt="Igen i &#229;r g&#229;r DR julem&#229;neden i m&#248;de med f&#230;llessang og julestemning i DR Koncerthuset, n&#229;r ’Danmark synger julen ind’ med v&#230;rt og dirigent Phillip Faber." />
+										</noscript>
+							</a>
+							<h3><a href="http://www.dr.dk/om-dr/nyheder/danmark-synger-julen-ind-igen">Danmark synger julen ind igen</a></h3>
+							<p class="metainfo">14. nov. 2016</p>
+						</article>
+			<aside><a class="section-link" href="http://www.dr.dk/Om_DR/">Se flere nyheder om dr</a></aside>
+		</section>
+	</div>
+</div>
+
+                
+
+            </div><!-- end.site-wrapper -->
+        </div>
+		
+        
+<!--[if IE 8 ]><div class="ie ie8"><![endif]-->
+<!--[if IE 9 ]><div class="ie ie9"><![endif]-->
+<section role="contentinfo" id="globalfooter">
+	<div class="nav-wrapper container-fluid">
+		<h2 class="dr-logo">Alt på dr.dk</h2>
+		<nav class="footer-search">
+			<h2>Søg på DR.dk</h2>
+			<form role="search" action="//www.dr.dk/search/Result" method="get">
+				<label for="footer-search">Søg på dr.dk</label><input id="footer-search" class="no-icon" type="text" name="query" placeholder="Søg på dr.dk" autocomplete="off"><button id="footer-submit" type="submit" class="dr-icon-search">Søg</button>
+			</form>
+		</nav>
+
+		<div class="desktop">
+					<nav>
+			<h2><a href="http://www.dr.dk/nyheder/"rel="nofollow">Nyheder</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/nyheder/"rel="nofollow">Nyhedsoverblikket</a></li>
+					<li><a href="http://www.dr.dk/p4/"rel="nofollow">Regionale Nyheder</a></li>
+					<li><a href="http://www.dr.dk/sporten/"rel="nofollow">Sport</a></li>
+					<li><a href="http://www.dr.dk/nyheder/vejret/"rel="nofollow">Vejret</a></li>
+					<li class="spaceAbove"><a href="http://www.dr.dk/drdk/moduler/ttv.aspx"rel="nofollow">Tekst-tv</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="https://www.dr.dk/tv"rel="nofollow">TV &amp; RADIO</a></h2>
+			
+<ul>					<li><a href="https://www.dr.dk/tv/oversigt/"rel="nofollow">TV-oversigten</a></li>
+					<li><a href="https://www.dr.dk/tv/programmer"rel="nofollow">TV-programmer</a></li>
+					<li><a href="https://www.dr.dk/tv/live/"class="featured-icon dr-icon-play-boxed" rel="nofollow">Se live TV</a></li>
+					<li><a href="https://www.dr.dk/tv/boern"rel="nofollow">B&#248;rn</a></li>
+					<li class="spaceAbove"><a href="http://www.dr.dk/radio/"class="featured-icon dr-icon-audio-boxed" rel="nofollow">H&#248;r radio</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="http://www.dr.dk/service"rel="nofollow">Services</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/service/dr-apps"rel="nofollow">Apps</a></li>
+					<li><a href="http://www.dr.dk/tilg&#230;ngelighed"rel="nofollow">Tilg&#230;ngelighed</a></li>
+					<li><a href="http://www.dr.dk/Service/socialemedier/"rel="nofollow">DR p&#229; Sociale medier</a></li>
+					<li><a href="http://nyhedsbreve.dr.dk"rel="nofollow">Nyhedsbreve</a></li>
+					<li class="spaceAbove"><a href="http://www.dr.dk/hjaelp"rel="nofollow">Hj&#230;lp</a></li>
+					<li><a href="http://www.dr.dk/service/privatlivspolitik/"class="dr-link-privacy-policy" rel="nofollow">Cookie- og privatlivspolitik</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="http://www.dr.dk/om-dr"rel="nofollow">Om DR</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/Om_DR/arkiv/"rel="nofollow">Nyt fra DR</a></li>
+					<li><a href="http://www.dr.dk/Om_DR/Licens/"rel="nofollow">Licens</a></li>
+					<li><a href="http://www.dr.dk/Om_DR/Job+og+karriere/"rel="nofollow">Job i DR</a></li>
+					<li><a href="http://www.dr.dk/presse/"rel="nofollow">Presse</a></li>
+					<li class="spaceAbove"><a href="http://www.dr.dk/om-dr/vilkaar-paa-drdk"rel="nofollow">Vilk&#229;r p&#229; dr.dk</a></li>
+</ul>		</nav>
+
+			<nav class="disclaimer-section">
+				<div class="container-fluid">
+					<div id="globalSSOwrapper" class="globalSSOwrapper">
+						<a href="/login" id="globalSSOLogin">Log ind</a>
+						<a href="/login/account/create" id="globalSSOCreate">Ny bruger</a>
+						<a href="/login" id="globalSSOUser"></a>
+						<a href="/login/logout" id="globalSSOLogoff">Log ud</a>
+					</div>
+					<h2><a href="#">Disclaimer</a></h2>
+					<ul>
+						<li>
+                            <span class="bold">DR</span>
+						</li>
+						<li><span>Emil Holms Kanal 20</span></li>
+						<li><span>0999 København C</span></li>
+                        <li><span>Tlf. 35 20 30 40</span></li>
+						<li><a href="http://www.dr.dk/Om_DR/kontakt+dr/" rel="nofollow">KONTAKT</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="mobile">
+					<nav>
+			<h2><a href="http://www.dr.dk/nyheder/"rel="nofollow">Nyheder</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/nyheder/"rel="nofollow">Nyhedsoverblikket</a></li>
+					<li><a href="http://www.dr.dk/p4/"rel="nofollow">Regionale Nyheder</a></li>
+					<li><a href="http://www.dr.dk/sporten/"rel="nofollow">Sport</a></li>
+					<li><a href="http://www.dr.dk/nyheder/vejret/"rel="nofollow">Vejret</a></li>
+					<li><a href="http://www.dr.dk/drdk/moduler/ttv.aspx"rel="nofollow">Tekst-tv</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="https://www.dr.dk/tv/"rel="nofollow">TV &amp; RADIO</a></h2>
+			
+<ul>					<li><a href="https://www.dr.dk/tv/oversigt/"rel="nofollow">TV-oversigten</a></li>
+					<li><a href="https://www.dr.dk/tv/programmer"rel="nofollow">TV-programmer</a></li>
+					<li><a href="https://www.dr.dk/tv/live/"class="featured-icon dr-icon-play-boxed" rel="nofollow">Se live TV</a></li>
+					<li><a href="https://www.dr.dk/tv/boern"rel="nofollow">B&#248;rn</a></li>
+					<li><a href="http://www.dr.dk/radio/"class="featured-icon dr-icon-audio-boxed" rel="nofollow">H&#248;r radio</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="http://www.dr.dk/service"rel="nofollow">Services</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/service/dr-apps"rel="nofollow">Apps</a></li>
+					<li><a href="http://www.dr.dk/tilg&#230;ngelighed"rel="nofollow">Tilg&#230;ngelighed</a></li>
+					<li><a href="http://www.dr.dk/Service/socialemedier/"rel="nofollow">DR p&#229; Sociale medier</a></li>
+					<li><a href="http://nyhedsbreve.dr.dk"rel="nofollow">Nyhedsbreve</a></li>
+					<li><a href="http://www.dr.dk/hjaelp"rel="nofollow">Hj&#230;lp</a></li>
+					<li><a href="http://www.dr.dk/service/privatlivspolitik/"class="dr-link-privacy-policy" rel="nofollow">Cookie- og privatlivspolitik</a></li>
+</ul>		</nav>
+		<nav>
+			<h2><a href="http://www.dr.dk/om-dr"rel="nofollow">Om DR</a></h2>
+			
+<ul>					<li><a href="http://www.dr.dk/Om_DR/arkiv/"rel="nofollow">Nyt fra DR</a></li>
+					<li><a href="http://www.dr.dk/Om_DR/Licens/"rel="nofollow">Licens</a></li>
+					<li><a href="http://www.dr.dk/Om_DR/Job+og+karriere/"rel="nofollow">Job i DR</a></li>
+					<li><a href="http://www.dr.dk/presse/"rel="nofollow">Presse</a></li>
+					<li><a href="http://www.dr.dk/om-dr/vilkaar-paa-drdk"rel="nofollow">Vilk&#229;r p&#229; dr.dk</a></li>
+</ul>		</nav>
+
+			<nav class="disclaimer-section">
+				<div class="container-fluid">
+					<div id="globalSSOwrapper" class="globalSSOwrapper">
+						<a href="/login" id="globalSSOLogin">Log ind</a>
+						<a href="/login/account/create" id="globalSSOCreate">Ny bruger</a>
+						<a href="/login" id="globalSSOUser"></a>
+						<a href="/login/logout" id="globalSSOLogoff">Log ud</a>
+					</div>
+					<h2><a href="#">Disclaimer</a></h2>
+					<ul>
+						<li>
+                            <span class="bold">DR</span>
+						</li>
+						<li><span>Emil Holms Kanal 20</span></li>
+						<li><span>0999 København C</span></li>
+                        <li><span class="phone-number">Tlf. 35 20 30 40</span></li>
+						<li><a href="http://www.dr.dk/Om_DR/kontakt+dr/" rel="nofollow">KONTAKT</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</section>
+<!--[if IE]></div><![endif]-->
+
+        <script>
+            var pp_gemius_identifier = "bPCVH8OqSX7aAm.nf0yp6seB7xDYtxuoyD4hpEBBG1z.h7";
+        </script>
+        <script src="//www.dr.dk/drWebStat/drWebStat.js"></script>
+        <noscript> 
+            <img src="//ssl-dr.tns-gallup.dk/j0=,,,;+,cp=website/dr.dk/noscript/dr.dk.forsiden+url=//www.dr.dk;;;" alt="dr.dk forsiden">
+        </noscript>
+        
+    </body>
+</html>
