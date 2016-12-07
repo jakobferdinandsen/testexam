@@ -48,7 +48,6 @@ public class FileSearcher {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return new Result(count, result);
     }
 }

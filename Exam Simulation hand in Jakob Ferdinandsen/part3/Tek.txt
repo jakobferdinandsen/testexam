@@ -1,0 +1,27 @@
+T1:
+	The two main protocols is UDP and TCP.
+	UDP header size is 8 bytes
+	TCP header size is 20 bytes to 60 bytes where 40 bytes are for options
+
+	UDP offers a lightweight transport protocol used for pushing a lot of data through, eg in streaming. The sender doesnt care if the receiver received the data correctly.
+
+	TCP offers a heavy transport protocol, which prioritizes data integrity over speed. This is done by making making the receiver respond with the identifyer of the data it received. TCP also 
+	includes a handshake to establish a connection
+
+T2:
+	SQL is very vulnerable to SQL injection. This is done by escaping a string in eg. an input field.
+
+	User inputs:
+		Username: Bob
+		Password: 123
+	Results in "SELECT * FROM users WHERE username="bob" AND password="123""
+	
+	In SQL injection, password or username is escaped and code that is written into the field is executed eg.
+
+	User inputs:
+		Username: Bob
+		Password: 123" or 1=1
+	Results in "SELECT * FROM users WHERE username="bob" AND password="123" or 1=1"
+	Which would result in returning all users from the table users as WHERE 1=1 is always true
+
+	This technique can also be used in the password field

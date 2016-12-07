@@ -1,8 +1,0 @@
-nginx:
-  build: conf/
-  ports:
-    - "10000:80"
-    - "10001:443"
-    - "10002:9000"
-  volumes:
-    - ../:/data/www

@@ -1,19 +1,12 @@
 var url = "http://52.57.228.6/easj-simulation/acme.php";
-var customerArray = [];
+
 
 $(document).ready(function () {
-    loadData();
     $("#searchField").keyup(function (e) {
-            updateView();
+            loadData();
     });
+    loadData();
 });
-
-function updateView() {
-    $("#tableBody").html("");
-    customerArray.forEach(function (customer) {
-        add(customer, $("#searchField").val())
-    });
-}
 
 function loadData() {
     $.ajax({
@@ -21,8 +14,10 @@ function loadData() {
         url: url,
         dataType: "json",
         success: function (data) {
-            customerArray = data.data;
-            updateView();
+            $("#tableBody").html("");
+            data.data.forEach(function (customer) {
+                add(customer, $("#searchField").val())
+            })
         },
     });
 }
